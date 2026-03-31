@@ -300,16 +300,13 @@
 
         .hero-visual { position: relative; }
         .hero-photo-frame {
-            background: white; border-radius: var(--radius-lg); padding: 12px;
+            background: white; border-radius: var(--radius-lg); padding: 8px;
             box-shadow: var(--shadow-card); position: relative; overflow: visible;
         }
-        .hero-photo-placeholder {
-            width: 100%; aspect-ratio: 5/4; background: linear-gradient(135deg, var(--green-light) 0%, #d4e4c8 100%);
-            border-radius: var(--radius); display: flex; align-items: center; justify-content: center;
-            flex-direction: column; gap: 12px; color: var(--green-forest);
+        .hero-photo-frame img {
+            width: 100%; aspect-ratio: 3/2; object-fit: cover;
+            border-radius: var(--radius); display: block;
         }
-        .hero-photo-placeholder svg { width: 48px; height: 48px; opacity: 0.35; }
-        .hero-photo-placeholder span { font-size: 0.85rem; opacity: 0.5; font-weight: 500; text-align: center; padding: 0 20px; }
         .hero-card-overlay {
             position: absolute; bottom: -16px; left: -16px; background: white;
             border-radius: var(--radius); padding: 16px 20px; box-shadow: var(--shadow-card);
@@ -348,21 +345,15 @@
         }
         .presence-images { position: relative; }
         .presence-img-main {
-            width: 100%; aspect-ratio: 4/5; background: linear-gradient(135deg, var(--green-light) 0%, #cddfc2 100%);
-            border-radius: var(--radius-lg); display: flex; align-items: center; justify-content: center;
-            flex-direction: column; gap: 12px; color: var(--green-forest);
+            width: 100%; aspect-ratio: 4/5; border-radius: var(--radius-lg); overflow: hidden;
         }
-        .presence-img-main svg { width: 56px; height: 56px; opacity: 0.3; }
-        .presence-img-main span { font-size: 0.88rem; opacity: 0.45; font-weight: 500; }
+        .presence-img-main img { width: 100%; height: 100%; object-fit: cover; display: block; }
         .presence-img-inset {
             position: absolute; bottom: -20px; right: -20px; width: 50%; aspect-ratio: 4/3;
-            background: linear-gradient(135deg, #e0ddd6 0%, #d0cdc5 100%);
             border-radius: var(--radius); border: 4px solid white; box-shadow: var(--shadow-card);
-            display: flex; align-items: center; justify-content: center;
-            flex-direction: column; gap: 8px; color: var(--text-light);
+            overflow: hidden;
         }
-        .presence-img-inset svg { width: 36px; height: 36px; opacity: 0.3; }
-        .presence-img-inset span { font-size: 0.78rem; opacity: 0.5; font-weight: 500; }
+        .presence-img-inset img { width: 100%; height: 100%; object-fit: cover; display: block; }
         .presence-content h2 { margin-bottom: 20px; }
         .presence-content .lead {
             font-size: 1.08rem; color: var(--text-dark); margin-bottom: 16px; line-height: 1.7;
@@ -653,10 +644,7 @@
                 </div>
                 <div class="hero-visual">
                     <div class="hero-photo-frame">
-                        <div class="hero-photo-placeholder">
-                            <svg fill="none" stroke="currentColor" stroke-width="1.5" viewBox="0 0 24 24"><path d="M2.25 15.75l5.159-5.159a2.25 2.25 0 013.182 0l5.159 5.159m-1.5-1.5l1.409-1.409a2.25 2.25 0 013.182 0l2.909 2.909M3.75 21h16.5A2.25 2.25 0 0022.5 18.75V5.25A2.25 2.25 0 0020.25 3H3.75A2.25 2.25 0 001.5 5.25v13.5A2.25 2.25 0 003.75 21z"/></svg>
-                            <span>Photo: Peterson Insurance office or team welcoming a client</span>
-                        </div>
+                        <img src="images/hero.jpg" alt="Peterson Insurance Group office in Weaverville, NC with sign showing phone number and Erie Insurance logo, mountains in background" loading="eager">
                     </div>
                     <div class="hero-card-overlay">
                         <div class="hc-icon">
@@ -704,12 +692,10 @@
             <div class="presence-grid">
                 <div class="presence-images fade-in">
                     <div class="presence-img-main">
-                        <svg fill="none" stroke="currentColor" stroke-width="1.5" viewBox="0 0 24 24"><path d="M15.75 6a3.75 3.75 0 11-7.5 0 3.75 3.75 0 017.5 0zM4.501 20.118a7.5 7.5 0 0114.998 0A17.933 17.933 0 0112 21.75c-2.676 0-5.216-.584-7.499-1.632z"/></svg>
-                        <span>Eirene Peterson-Burnette</span>
+                        <img src="images/about-eirene-stom.jpg" alt="Eirene Peterson-Burnette and Stom Peterson outside the Peterson Insurance Group office in Weaverville, NC with Blue Ridge Mountains in background" loading="lazy">
                     </div>
                     <div class="presence-img-inset">
-                        <svg fill="none" stroke="currentColor" stroke-width="1.5" viewBox="0 0 24 24"><path d="M2.25 15.75l5.159-5.159a2.25 2.25 0 013.182 0l5.159 5.159m-1.5-1.5l1.409-1.409a2.25 2.25 0 013.182 0l2.909 2.909M3.75 21h16.5A2.25 2.25 0 0022.5 18.75V5.25A2.25 2.25 0 0020.25 3H3.75A2.25 2.25 0 001.5 5.25v13.5A2.25 2.25 0 003.75 21z"/></svg>
-                        <span>Team / Office Photo</span>
+                        <img src="images/lobby.jpg" alt="Peterson Insurance Group office lobby with comfortable seating, fresh flowers, and original artwork by Eirene Peterson-Burnette" loading="lazy">
                     </div>
                 </div>
                 <div class="presence-content fade-in">
