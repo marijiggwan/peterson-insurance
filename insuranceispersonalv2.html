@@ -32,7 +32,7 @@
         "@context": "https://schema.org",
         "@type": "InsuranceAgency",
         "name": "Peterson Insurance Group",
-        "description": "Peterson Insurance Group is a family-owned independent insurance agency in Weaverville, NC. Talk to a real person about your home, auto, business, life, or health insurance. We represent 13+ carriers and have served Western North Carolina since 2001.",
+        "description": "Peterson Insurance Group is a family-owned independent insurance agency in Weaverville, NC. Talk to a real person about your home, auto, business, life, or health insurance. We represent multiple carriers and have served Western North Carolina since 2001.",
         "url": "https://www.petersoninsurance.group",
         "telephone": "+1-828-645-8777",
         "email": "info@petersoninsurance.group",
@@ -109,7 +109,7 @@
                 "name": "Can I walk into Peterson Insurance Group without an appointment?",
                 "acceptedAnswer": {
                     "@type": "Answer",
-                    "text": "Yes. Peterson Insurance Group in Weaverville, NC welcomes walk-ins Monday through Friday, 9am to 5pm. No appointment needed. Bring the kids — there are toys in the office. You can also call 828-645-8777 or fill out a form on the website."
+                    "text": "Yes. Peterson Insurance Group in Weaverville, NC welcomes walk-ins Monday through Friday, 9am to 5pm. To avoid potential wait times, making an appointment is recommended. You can also call 828-645-8777 or fill out a form on the website."
                 }
             },
             {
@@ -117,7 +117,7 @@
                 "name": "Why use an independent insurance agent instead of buying online?",
                 "acceptedAnswer": {
                     "@type": "Answer",
-                    "text": "An independent agent like Peterson Insurance Group works for you, not for one insurance company. We represent 13+ carriers and can compare options to find coverage that fits your needs and budget. There's no extra cost to use an agent — and when something goes wrong, you have a real person to call who knows your name and your policy."
+                    "text": "An independent agent like Peterson Insurance Group works for you, not for one insurance company. We represent multiple carriers and can compare options to find coverage that fits your needs and budget. There's no extra cost to use an agent — and when something goes wrong, you have a real person to call who knows your name and your policy."
                 }
             },
             {
@@ -133,7 +133,7 @@
                 "name": "What types of insurance does Peterson Insurance Group offer?",
                 "acceptedAnswer": {
                     "@type": "Answer",
-                    "text": "Peterson Insurance Group offers personal insurance (home, auto, renters, boat, RV, motorcycle, flood), business insurance (general liability, commercial auto, workers compensation, contractors, bonds), and life and health insurance. We represent 13+ carriers including Erie Insurance, Progressive, Travelers, Liberty Mutual, Safeco, The Hartford, and more."
+                    "text": "Peterson Insurance Group offers personal insurance (home, auto, renters, boat, RV, motorcycle, flood), business insurance (general liability, commercial auto, workers compensation, contractors, bonds), and life and health insurance. We represent multiple carriers including Erie Insurance, Progressive, Travelers, Liberty Mutual, The Hartford, and more."
                 }
             }
         ]
@@ -178,16 +178,40 @@
         h2 { font-size: clamp(1.8rem, 3.5vw, 2.6rem); }
         h3 { font-size: clamp(1.3rem, 2.5vw, 1.6rem); }
 
-        .section-label {
-            font-family: var(--font-body); font-size: 0.8rem; font-weight: 600;
-            letter-spacing: 0.12em; text-transform: uppercase;
-            color: var(--green-forest); margin-bottom: 0.75rem;
-        }
 
         .container { max-width: 1140px; margin: 0 auto; padding: 0 24px; }
         section { padding: 80px 0; }
 
-        /* ===== NAV ===== */
+        /* ===== BRAND ELEMENTS: WAVE & SPRIG ===== */
+        .wave-divider {
+            display: flex; justify-content: center; align-items: center;
+            padding: 16px 0; overflow: hidden; position: relative;
+        }
+        .wave-divider svg {
+            width: 180px; height: auto; opacity: 0.15;
+        }
+        .wave-divider.wave-light svg { opacity: 0.10; }
+        .wave-divider.wave-on-dark svg { opacity: 0.2; }
+        .wave-divider.wave-on-dark svg path { fill: #ffffff; }
+
+        .section-label {
+            font-family: var(--font-body); font-size: 0.8rem; font-weight: 600;
+            letter-spacing: 0.12em; text-transform: uppercase;
+            color: var(--green-forest); margin-bottom: 0.75rem;
+            display: flex; align-items: center; gap: 8px;
+        }
+        .section-label .sprig-accent {
+            width: 16px; height: auto; opacity: 0.5; flex-shrink: 0;
+        }
+
+        .sprig-inline {
+            width: 20px; height: auto; opacity: 0.3; display: inline-block; vertical-align: middle;
+        }
+        .presence-callout .sprig-accent {
+            position: absolute; top: -8px; left: -4px; width: 24px; height: auto; opacity: 0.2;
+            transform: rotate(-15deg);
+        }
+        .presence-callout { position: relative; }
         .nav {
             position: fixed; top: 0; left: 0; right: 0; z-index: 1000;
             background: rgba(255, 255, 255, 0.97); backdrop-filter: blur(8px);
@@ -639,8 +663,8 @@
                             <svg fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path d="M4.318 6.318a4.5 4.5 0 000 6.364L12 20.364l7.682-7.682a4.5 4.5 0 00-6.364-6.364L12 7.636l-1.318-1.318a4.5 4.5 0 00-6.364 0z"/></svg>
                         </div>
                         <div class="hc-text">
-                            <strong>Kids are welcome</strong>
-                            We've got toys in the office
+                            <strong>Locally owned since 2001</strong>
+                            Right here on Main Street
                         </div>
                     </div>
                 </div>
@@ -662,17 +686,19 @@
                 </div>
                 <div class="trust-pill">
                     <svg fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path d="M9 12l2 2 4-4m5.618-4.016A11.955 11.955 0 0112 2.944a11.955 11.955 0 01-8.618 3.04A12.02 12.02 0 003 9c0 5.591 3.824 10.29 9 11.622 5.176-1.332 9-6.03 9-11.622 0-1.042-.133-2.052-.382-3.016z"/></svg>
-                    <span>13+ Insurance Carriers</span>
+                    <span>Multiple Insurance Carriers</span>
                 </div>
                 <div class="trust-pill">
                     <svg fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path d="M22 16.92v3a2 2 0 01-2.18 2 19.79 19.79 0 01-8.63-3.07 19.5 19.5 0 01-6-6 19.79 19.79 0 01-3.07-8.67A2 2 0 014.11 2h3a2 2 0 012 1.72c.127.96.361 1.903.7 2.81a2 2 0 01-.45 2.11L8.09 9.91a16 16 0 006 6l1.27-1.27a2 2 0 012.11-.45c.907.339 1.85.573 2.81.7A2 2 0 0122 16.92z"/></svg>
-                    <span>We Answer the Phone</span>
+                    <span>Real People, Real Responses</span>
                 </div>
             </div>
         </div>
     </div>
 
-    <!-- ABOUT / PRESENCE -->
+    <div class="wave-divider" aria-hidden="true">
+        <svg viewBox="0 0 400 100" xmlns="http://www.w3.org/2000/svg"><path d="M0 60 C60 60 80 25 140 30 C200 35 210 70 270 65 C330 60 360 30 400 40" fill="none" stroke="#1A3C5E" stroke-width="14" stroke-linecap="round"/><path d="M20 75 C80 75 110 45 160 50 C210 55 230 80 290 75 C340 71 370 50 400 55" fill="none" stroke="#1A3C5E" stroke-width="10" stroke-linecap="round"/></svg>
+    </div>
     <section class="presence" id="about">
         <div class="container">
             <div class="presence-grid">
@@ -687,10 +713,10 @@
                     </div>
                 </div>
                 <div class="presence-content fade-in">
-                    <span class="section-label">Who We Are</span>
+                    <span class="section-label"><svg class="sprig-accent" viewBox="0 0 24 48" xmlns="http://www.w3.org/2000/svg"><path d="M12 48 V24" stroke="#4A7A2E" stroke-width="2" fill="none"/><path d="M12 24 C12 18 6 14 2 12 C6 12 12 16 12 20" fill="#7BA35A" opacity="0.7"/><path d="M12 20 C12 14 18 10 22 8 C18 8 12 12 12 16" fill="#4A7A2E" opacity="0.6"/><path d="M12 14 C12 8 6 4 3 2 C7 2 12 6 12 10" fill="#7BA35A" opacity="0.8"/></svg>Who We Are</span>
                     <h2>Your Neighbors in Insurance Since 2001</h2>
                     <p class="lead">Peterson Insurance Group was founded by Stom Peterson right here in Weaverville. Today, his daughter Eirene Peterson-Burnette carries on the family tradition — running an agency where people walk in, sit down, and get real help from someone who knows their name.</p>
-                    <p>We're an independent agency, which means we represent you — not one insurance company. We work with 13+ carriers to find coverage that fits your life. But what makes us different isn't just the options. It's that we're here. Same office. Same hours. Same people. When something happens, you don't call a number and wait on hold. You call us, or you walk in.</p>
+                    <p>We're an independent agency, which means we represent you — not one insurance company. We work with multiple carriers to find coverage that fits your life. But what makes us different isn't just the options. It's that we're here. Same office. Same hours. Same people. When something happens, you don't call a number and wait on hold. You call us, or you walk in.</p>
 
                     <div class="presence-callout">
                         <p>When Hurricane Helene hit our community, we didn't disappear. We set up a temporary office, worked around the clock, and made sure every client could reach us. That's what being local means — we're here when it matters most.</p>
@@ -700,11 +726,15 @@
         </div>
     </section>
 
+    <div class="wave-divider" aria-hidden="true">
+        <svg viewBox="0 0 400 100" xmlns="http://www.w3.org/2000/svg"><path d="M0 60 C60 60 80 25 140 30 C200 35 210 70 270 65 C330 60 360 30 400 40" fill="none" stroke="#1A3C5E" stroke-width="14" stroke-linecap="round"/><path d="M20 75 C80 75 110 45 160 50 C210 55 230 80 290 75 C340 71 370 50 400 55" fill="none" stroke="#1A3C5E" stroke-width="10" stroke-linecap="round"/></svg>
+    </div>
+
     <!-- HOW WE HELP -->
     <section class="how-we-help" id="how">
         <div class="container">
             <div class="section-header fade-in">
-                <span class="section-label">How We Help</span>
+                <span class="section-label"><svg class="sprig-accent" viewBox="0 0 24 48" xmlns="http://www.w3.org/2000/svg"><path d="M12 48 V24" stroke="#4A7A2E" stroke-width="2" fill="none"/><path d="M12 24 C12 18 6 14 2 12 C6 12 12 16 12 20" fill="#7BA35A" opacity="0.7"/><path d="M12 20 C12 14 18 10 22 8 C18 8 12 12 12 16" fill="#4A7A2E" opacity="0.6"/><path d="M12 14 C12 8 6 4 3 2 C7 2 12 6 12 10" fill="#7BA35A" opacity="0.8"/></svg>How We Help</span>
                 <h2>We Make Insurance Simple</h2>
                 <p>No comparison websites. No automated phone trees. Just a real person who listens, shops around for you, and explains your options in plain English.</p>
             </div>
@@ -717,7 +747,7 @@
                 <div class="step-card fade-in">
                     <div class="step-number">2</div>
                     <h3>We Do the Shopping</h3>
-                    <p>We compare rates and coverage across 13+ insurance carriers. That's hours of work you don't have to do. We find the options that actually fit your situation.</p>
+                    <p>We compare rates and coverage across multiple insurance carriers. That's hours of work you don't have to do. We find the options that actually fit your situation.</p>
                 </div>
                 <div class="step-card fade-in">
                     <div class="step-number">3</div>
@@ -728,11 +758,15 @@
         </div>
     </section>
 
+    <div class="wave-divider" aria-hidden="true">
+        <svg viewBox="0 0 400 100" xmlns="http://www.w3.org/2000/svg"><path d="M0 60 C60 60 80 25 140 30 C200 35 210 70 270 65 C330 60 360 30 400 40" fill="none" stroke="#1A3C5E" stroke-width="14" stroke-linecap="round"/><path d="M20 75 C80 75 110 45 160 50 C210 55 230 80 290 75 C340 71 370 50 400 55" fill="none" stroke="#1A3C5E" stroke-width="10" stroke-linecap="round"/></svg>
+    </div>
+
     <!-- SERVICES -->
     <section class="services" id="services">
         <div class="container">
             <div class="section-header fade-in">
-                <span class="section-label">What We Cover</span>
+                <span class="section-label"><svg class="sprig-accent" viewBox="0 0 24 48" xmlns="http://www.w3.org/2000/svg"><path d="M12 48 V24" stroke="#4A7A2E" stroke-width="2" fill="none"/><path d="M12 24 C12 18 6 14 2 12 C6 12 12 16 12 20" fill="#7BA35A" opacity="0.7"/><path d="M12 20 C12 14 18 10 22 8 C18 8 12 12 12 16" fill="#4A7A2E" opacity="0.6"/><path d="M12 14 C12 8 6 4 3 2 C7 2 12 6 12 10" fill="#7BA35A" opacity="0.8"/></svg>What We Cover</span>
                 <h2>Insurance for Your Whole Life</h2>
                 <p>From your home and vehicles to your business and your family's future — we've got you.</p>
             </div>
@@ -789,21 +823,18 @@
     <!-- PROVIDERS -->
     <section class="providers">
         <div class="container">
-            <div class="providers-label">We Represent 13+ Insurance Companies So You Have Options</div>
+            <div class="providers-label">We Represent Multiple Insurance Companies So You Have Options</div>
             <div class="providers-logos">
                 <span class="provider-logo">Erie</span>
                 <span class="provider-logo">Progressive</span>
                 <span class="provider-logo">Travelers</span>
                 <span class="provider-logo">Liberty Mutual</span>
-                <span class="provider-logo">Safeco</span>
                 <span class="provider-logo">The Hartford</span>
                 <span class="provider-logo">Foremost</span>
                 <span class="provider-logo">National General</span>
-                <span class="provider-logo">AFLAC</span>
                 <span class="provider-logo">Piedmont Mutual</span>
-                <span class="provider-logo">Heritage</span>
                 <span class="provider-logo">Hagerty</span>
-                <span class="provider-logo">United Healthcare</span>
+                <span class="provider-logo">&amp; more</span>
             </div>
         </div>
     </section>
@@ -813,7 +844,7 @@
         <div class="container">
             <div class="faq-grid">
                 <div class="faq-intro fade-in">
-                    <span class="section-label">Questions?</span>
+                    <span class="section-label"><svg class="sprig-accent" viewBox="0 0 24 48" xmlns="http://www.w3.org/2000/svg"><path d="M12 48 V24" stroke="#4A7A2E" stroke-width="2" fill="none"/><path d="M12 24 C12 18 6 14 2 12 C6 12 12 16 12 20" fill="#7BA35A" opacity="0.7"/><path d="M12 20 C12 14 18 10 22 8 C18 8 12 12 12 16" fill="#4A7A2E" opacity="0.6"/><path d="M12 14 C12 8 6 4 3 2 C7 2 12 6 12 10" fill="#7BA35A" opacity="0.8"/></svg>Questions?</span>
                     <h2>People Ask Us This a Lot</h2>
                     <p>If you don't see your question here, just call. We'd rather talk it through than have you guessing.</p>
                     <a href="tel:8286458777" class="btn-outline">
@@ -824,11 +855,11 @@
                 <div class="faq-items fade-in">
                     <div class="faq-item active">
                         <button class="faq-question">Can I just walk in without an appointment?<span class="faq-toggle"><svg fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path d="M12 5v14M5 12h14"/></svg></span></button>
-                        <div class="faq-answer"><div class="faq-answer-inner">Absolutely. We're open Monday through Friday, 9am to 5pm, and walk-ins are always welcome. You don't need an appointment to stop by — bring the kids, we've got toys in the office. If you want to sit down for a longer conversation about your coverage, calling ahead is great but never required.</div></div>
+                        <div class="faq-answer"><div class="faq-answer-inner">Absolutely. We're open Monday through Friday, 9am to 5pm, and walk-ins are always welcome. To avoid potential wait times, making an appointment is recommended — but you're always welcome to stop by. Call us at 828-645-8777 or use the form below to schedule a time that works for you.</div></div>
                     </div>
                     <div class="faq-item">
                         <button class="faq-question">Why use a local agent instead of buying insurance online?<span class="faq-toggle"><svg fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path d="M12 5v14M5 12h14"/></svg></span></button>
-                        <div class="faq-answer"><div class="faq-answer-inner">When you buy online, you're on your own. When something goes wrong — a storm, an accident, a claim that gets complicated — you're on hold with a call center. With a local agent, you have someone you can call directly, someone who knows your policy and your situation. We also represent 13+ carriers, so we can compare options for you. And there's no extra cost for using an agent — our commission comes from the insurance company, not from you.</div></div>
+                        <div class="faq-answer"><div class="faq-answer-inner">When you buy online, you're on your own. When something goes wrong — a storm, an accident, a claim that gets complicated — you're on hold with a call center. With a local agent, you have someone you can call directly, someone who knows your policy and your situation. We represent multiple carriers, so we can compare options for you. And there's no extra cost for using an agent — our commission comes from the insurance company, not from you.</div></div>
                     </div>
                     <div class="faq-item">
                         <button class="faq-question">What areas do you serve?<span class="faq-toggle"><svg fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path d="M12 5v14M5 12h14"/></svg></span></button>
@@ -836,7 +867,7 @@
                     </div>
                     <div class="faq-item">
                         <button class="faq-question">What types of insurance do you offer?<span class="faq-toggle"><svg fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path d="M12 5v14M5 12h14"/></svg></span></button>
-                        <div class="faq-answer"><div class="faq-answer-inner">We cover personal insurance (home, auto, renters, boat, RV, motorcycle, flood), business insurance (general liability, commercial auto, workers comp, contractors, bonds), and life and health insurance. We represent carriers like Erie, Progressive, Travelers, Liberty Mutual, Safeco, The Hartford, and more — so we can shop across them to find what fits.</div></div>
+                        <div class="faq-answer"><div class="faq-answer-inner">We cover personal insurance (home, auto, renters, boat, RV, motorcycle, flood), business insurance (general liability, commercial auto, workers comp, contractors, bonds), and life and health insurance. We represent carriers like Erie, Progressive, Travelers, Liberty Mutual, The Hartford, and more — so we can shop across them to find what fits.</div></div>
                     </div>
                     <div class="faq-item">
                         <button class="faq-question">What do small businesses in NC typically need for insurance?<span class="faq-toggle"><svg fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path d="M12 5v14M5 12h14"/></svg></span></button>
@@ -856,7 +887,7 @@
         <div class="container">
             <div class="contact-grid">
                 <div class="contact-info fade-in">
-                    <span class="section-label">Come See Us</span>
+                    <span class="section-label"><svg class="sprig-accent" viewBox="0 0 24 48" xmlns="http://www.w3.org/2000/svg"><path d="M12 48 V24" stroke="#4A7A2E" stroke-width="2" fill="none"/><path d="M12 24 C12 18 6 14 2 12 C6 12 12 16 12 20" fill="#7BA35A" opacity="0.7"/><path d="M12 20 C12 14 18 10 22 8 C18 8 12 12 12 16" fill="#4A7A2E" opacity="0.6"/><path d="M12 14 C12 8 6 4 3 2 C7 2 12 6 12 10" fill="#7BA35A" opacity="0.8"/></svg>Come See Us</span>
                     <h2>Let's Talk About Your Insurance</h2>
                     <p>Whether you need a quote, have a question, or just want to know your options — we're here. No obligation, no pressure. Just a conversation.</p>
                     <div class="contact-details">
@@ -874,7 +905,7 @@
                         </div>
                     </div>
                     <div class="walkin-note">
-                        <p><strong>Walk-ins are always welcome.</strong> We're right on Main Street in Weaverville. Stop by anytime during office hours — bring the kids, we've got toys. No appointment needed.</p>
+                        <p><strong>Walk-ins are welcome.</strong> We're right on Main Street in Weaverville. To avoid potential wait times, making an appointment is recommended. Call or use the form to schedule a time.</p>
                     </div>
                 </div>
                 <div class="contact-form-card fade-in">
@@ -909,6 +940,10 @@
             </div>
         </div>
     </section>
+
+    <div class="wave-divider" aria-hidden="true">
+        <svg viewBox="0 0 400 100" xmlns="http://www.w3.org/2000/svg"><path d="M0 60 C60 60 80 25 140 30 C200 35 210 70 270 65 C330 60 360 30 400 40" fill="none" stroke="#1A3C5E" stroke-width="14" stroke-linecap="round"/><path d="M20 75 C80 75 110 45 160 50 C210 55 230 80 290 75 C340 71 370 50 400 55" fill="none" stroke="#1A3C5E" stroke-width="10" stroke-linecap="round"/></svg>
+    </div>
 
     <!-- FOOTER -->
     <footer class="footer">
