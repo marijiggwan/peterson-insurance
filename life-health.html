@@ -34,7 +34,7 @@
             }
         },
         "areaServed": {"@type": "State", "name": "North Carolina"},
-        "description": "Peterson Insurance Group offers life insurance (term, whole, universal) through Erie Family Life Insurance Company, Medicare Supplement plans, and supplemental health insurance through AFLAC. Serving Weaverville, Asheville, and Western North Carolina.",
+        "description": "Peterson Insurance Group offers life insurance (term, whole, universal) through Erie Family Life Insurance Company, Medicare Supplement plans, and health coverage assistance. Serving Weaverville, Asheville, and Western North Carolina.",
         "hasOfferCatalog": {
             "@type": "OfferCatalog",
             "name": "Life & Health Insurance Products",
@@ -76,7 +76,7 @@
                 "name": "Does Peterson Insurance Group offer health insurance?",
                 "acceptedAnswer": {
                     "@type": "Answer",
-                    "text": "Peterson Insurance Group offers supplemental health insurance through AFLAC, Medicare Supplement plans through Erie Family Life Insurance Company, and health insurance through United Healthcare. Contact Peterson Insurance at 828-645-8777 to discuss your health coverage options."
+                    "text": "Peterson Insurance Group offers Medicare Supplement plans through Erie Family Life Insurance Company and can help arrange short-term health coverage through our partner network. Contact Peterson Insurance at 828-645-8777 to discuss your health coverage options."
                 }
             }
         ]
@@ -124,6 +124,17 @@
             font-family: var(--font-body); font-size: 0.8rem; font-weight: 600;
             letter-spacing: 0.12em; text-transform: uppercase;
             color: var(--green-forest); margin-bottom: 0.75rem;
+            display: flex; align-items: center; gap: 8px;
+        }
+        .section-label .sprig-accent {
+            width: 16px; height: auto; opacity: 0.5; flex-shrink: 0;
+        }
+        .wave-divider {
+            display: flex; justify-content: center; align-items: center;
+            padding: 16px 0; overflow: hidden;
+        }
+        .wave-divider svg {
+            width: 180px; height: auto; opacity: 0.15;
         }
 
         .container { max-width: 1140px; margin: 0 auto; padding: 0 24px; }
@@ -379,7 +390,7 @@
         <div class="container">
             <div class="coverage-header fade-in">
                 <div>
-                    <span class="section-label">Life Insurance</span>
+                    <span class="section-label"><svg class="sprig-accent" viewBox="0 0 24 48" xmlns="http://www.w3.org/2000/svg"><path d="M12 48 V24" stroke="#4A7A2E" stroke-width="2" fill="none"/><path d="M12 24 C12 18 6 14 2 12 C6 12 12 16 12 20" fill="#7BA35A" opacity="0.7"/><path d="M12 20 C12 14 18 10 22 8 C18 8 12 12 12 16" fill="#4A7A2E" opacity="0.6"/><path d="M12 14 C12 8 6 4 3 2 C7 2 12 6 12 10" fill="#7BA35A" opacity="0.8"/></svg>Life Insurance</span>
                     <h2>Protect the People Who Depend on You</h2>
                     <p class="lead">Life insurance gives your family financial security if something happens to you. It can cover mortgage payments, daily expenses, college tuition, final expenses — whatever your family would need to keep going. We offer life insurance through Erie Family Life Insurance Company, with options that range from affordable term coverage to lifetime whole life policies.</p>
                     <div class="carrier-badge"><span class="dot"></span> Provided through Erie Family Life Insurance Company</div>
@@ -427,12 +438,16 @@
         </div>
     </section>
 
+    <div class="wave-divider" aria-hidden="true">
+        <svg viewBox="0 0 400 100" xmlns="http://www.w3.org/2000/svg"><path d="M0 60 C60 60 80 25 140 30 C200 35 210 70 270 65 C330 60 360 30 400 40" fill="none" stroke="#1A3C5E" stroke-width="14" stroke-linecap="round"/><path d="M20 75 C80 75 110 45 160 50 C210 55 230 80 290 75 C340 71 370 50 400 55" fill="none" stroke="#1A3C5E" stroke-width="10" stroke-linecap="round"/></svg>
+    </div>
+
     <!-- MEDICARE SUPPLEMENT -->
     <section class="coverage-section" id="medicare">
         <div class="container">
             <div class="coverage-header fade-in">
                 <div>
-                    <span class="section-label">Medicare Supplement</span>
+                    <span class="section-label"><svg class="sprig-accent" viewBox="0 0 24 48" xmlns="http://www.w3.org/2000/svg"><path d="M12 48 V24" stroke="#4A7A2E" stroke-width="2" fill="none"/><path d="M12 24 C12 18 6 14 2 12 C6 12 12 16 12 20" fill="#7BA35A" opacity="0.7"/><path d="M12 20 C12 14 18 10 22 8 C18 8 12 12 12 16" fill="#4A7A2E" opacity="0.6"/><path d="M12 14 C12 8 6 4 3 2 C7 2 12 6 12 10" fill="#7BA35A" opacity="0.8"/></svg>Medicare Supplement</span>
                     <h2>Fill the Gaps Medicare Doesn't Cover</h2>
                     <p class="lead">Medicare Parts A and B cover a lot — but not everything. Deductibles, copayments, and coinsurance can add up fast, especially on a fixed income. A Medicare Supplement plan (also called Medigap) helps pay for those out-of-pocket costs, so you're not choosing between your health and your budget.</p>
                     <div class="carrier-badge"><span class="dot"></span> Provided through Erie Family Life Insurance Company</div>
@@ -480,28 +495,19 @@
         <div class="container">
             <div class="coverage-header fade-in">
                 <div>
-                    <span class="section-label">Supplemental &amp; Health Coverage</span>
-                    <h2>Extra Protection When You Need It</h2>
-                    <p class="lead">Health insurance covers the basics, but unexpected events — an accident, a serious illness, a hospital stay — can still leave you with bills your regular plan doesn't cover. Supplemental health insurance fills those gaps, giving you cash benefits to help with deductibles, lost income, and everyday expenses during recovery.</p>
+                    <span class="section-label"><svg class="sprig-accent" viewBox="0 0 24 48" xmlns="http://www.w3.org/2000/svg"><path d="M12 48 V24" stroke="#4A7A2E" stroke-width="2" fill="none"/><path d="M12 24 C12 18 6 14 2 12 C6 12 12 16 12 20" fill="#7BA35A" opacity="0.7"/><path d="M12 20 C12 14 18 10 22 8 C18 8 12 12 12 16" fill="#4A7A2E" opacity="0.6"/><path d="M12 14 C12 8 6 4 3 2 C7 2 12 6 12 10" fill="#7BA35A" opacity="0.8"/></svg>Health Coverage</span>
+                    <h2>Need Health Insurance? We Can Help.</h2>
+                    <p class="lead">While our core focus is life insurance and Medicare Supplement through Erie, we know that sometimes you need help finding health coverage too — especially during transitions. We can connect you with short-term health options through our partner network to bridge the gap.</p>
                 </div>
             </div>
 
             <div class="type-cards">
                 <div class="type-card fade-in">
-                    <h3>AFLAC Supplemental Health</h3>
-                    <p>AFLAC supplemental insurance pays cash benefits directly to you when a covered event happens — not to the hospital or doctor. You decide how to use the money, whether it's covering deductibles, paying the mortgage, or handling everyday expenses while you recover.</p>
-                    <div class="card-detail"><svg fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path d="M9 12l2 2 4-4"/></svg><span>Cash benefits paid directly to you</span></div>
-                    <div class="card-detail"><svg fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path d="M9 12l2 2 4-4"/></svg><span>Works alongside your existing health insurance</span></div>
-                    <div class="card-detail"><svg fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path d="M9 12l2 2 4-4"/></svg><span>Coverage for accidents, critical illness, hospital stays</span></div>
-                    <div class="carrier-badge" style="margin-top: 16px;"><span class="dot"></span> Provided through AFLAC</div>
-                </div>
-
-                <div class="type-card fade-in">
-                    <h3>United Healthcare</h3>
-                    <p>For broader health insurance needs, we work with United Healthcare to provide individual and group health coverage options. Whether you're self-employed, a small business owner looking for employee coverage, or transitioning between plans, we can help you explore what's available.</p>
-                    <div class="card-detail"><svg fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path d="M9 12l2 2 4-4"/></svg><span>Individual and group health plans</span></div>
-                    <div class="card-detail"><svg fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path d="M9 12l2 2 4-4"/></svg><span>One of the nation's largest health insurance networks</span></div>
-                    <div class="carrier-badge" style="margin-top: 16px;"><span class="dot"></span> Provided through United Healthcare</div>
+                    <h3>Short-Term Health Coverage</h3>
+                    <p>Need temporary major medical coverage? Whether you're between jobs, waiting for employer benefits to start, or navigating a life transition, we can help connect you with short-term health insurance options through our partner network.</p>
+                    <div class="card-detail"><svg fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path d="M9 12l2 2 4-4"/></svg><span>Temporary major medical coverage</span></div>
+                    <div class="card-detail"><svg fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path d="M9 12l2 2 4-4"/></svg><span>Bridge coverage for life transitions</span></div>
+                    <div class="carrier-badge" style="margin-top: 16px;"><span class="dot"></span> Arranged through our partner network</div>
                 </div>
             </div>
         </div>
@@ -511,7 +517,7 @@
     <section class="comparison-section" id="compare">
         <div class="container">
             <div style="text-align: center; margin-bottom: 40px;" class="fade-in">
-                <span class="section-label">At a Glance</span>
+                <span class="section-label"><svg class="sprig-accent" viewBox="0 0 24 48" xmlns="http://www.w3.org/2000/svg"><path d="M12 48 V24" stroke="#4A7A2E" stroke-width="2" fill="none"/><path d="M12 24 C12 18 6 14 2 12 C6 12 12 16 12 20" fill="#7BA35A" opacity="0.7"/><path d="M12 20 C12 14 18 10 22 8 C18 8 12 12 12 16" fill="#4A7A2E" opacity="0.6"/><path d="M12 14 C12 8 6 4 3 2 C7 2 12 6 12 10" fill="#7BA35A" opacity="0.8"/></svg>At a Glance</span>
                 <h2>Life Insurance Comparison</h2>
                 <p style="max-width: 560px; margin: 12px auto 0; font-size: 1.02rem;">Not sure which type of life insurance is right? Here's how they compare on the things that matter most.</p>
             </div>
@@ -551,11 +557,15 @@
         </div>
     </div>
 
+    <div class="wave-divider" aria-hidden="true">
+        <svg viewBox="0 0 400 100" xmlns="http://www.w3.org/2000/svg"><path d="M0 60 C60 60 80 25 140 30 C200 35 210 70 270 65 C330 60 360 30 400 40" fill="none" stroke="#1A3C5E" stroke-width="14" stroke-linecap="round"/><path d="M20 75 C80 75 110 45 160 50 C210 55 230 80 290 75 C340 71 370 50 400 55" fill="none" stroke="#1A3C5E" stroke-width="10" stroke-linecap="round"/></svg>
+    </div>
+
     <!-- FAQ -->
     <section class="faq" id="faq">
         <div class="container">
             <div style="text-align: center; margin-bottom: 48px;" class="fade-in">
-                <span class="section-label">Common Questions</span>
+                <span class="section-label"><svg class="sprig-accent" viewBox="0 0 24 48" xmlns="http://www.w3.org/2000/svg"><path d="M12 48 V24" stroke="#4A7A2E" stroke-width="2" fill="none"/><path d="M12 24 C12 18 6 14 2 12 C6 12 12 16 12 20" fill="#7BA35A" opacity="0.7"/><path d="M12 20 C12 14 18 10 22 8 C18 8 12 12 12 16" fill="#4A7A2E" opacity="0.6"/><path d="M12 14 C12 8 6 4 3 2 C7 2 12 6 12 10" fill="#7BA35A" opacity="0.8"/></svg>Common Questions</span>
                 <h2>Life &amp; Health Insurance FAQ</h2>
             </div>
             <div class="faq-items fade-in">
@@ -580,12 +590,16 @@
                     <div class="faq-answer"><div class="faq-answer-inner">Medicare Supplement (Medigap) works alongside Original Medicare — you keep Parts A and B and add supplemental coverage to reduce out-of-pocket costs. You can see any doctor who accepts Medicare. Medicare Advantage (Part C) replaces Original Medicare with a private plan that may include additional benefits like vision or dental, but typically restricts you to a network of providers. Erie Family Life offers Medicare Supplement plans but does not sell Medicare Advantage. We can help you understand which approach makes more sense for your healthcare needs.</div></div>
                 </div>
                 <div class="faq-item">
-                    <button class="faq-question">What does supplemental health insurance cover?<span class="faq-toggle"><svg fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path d="M12 5v14M5 12h14"/></svg></span></button>
-                    <div class="faq-answer"><div class="faq-answer-inner">Supplemental health insurance through AFLAC pays cash benefits directly to you when a covered event happens — things like accidents, critical illness diagnoses, or hospital stays. The money isn't tied to medical bills. You can use it however you need: covering deductibles, paying rent, buying groceries while you recover. It's designed to work alongside your existing health insurance, not replace it.</div></div>
+                    <button class="faq-question">Can you help with short-term health insurance?<span class="faq-toggle"><svg fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path d="M12 5v14M5 12h14"/></svg></span></button>
+                    <div class="faq-answer"><div class="faq-answer-inner">Yes. If you're between jobs, waiting for employer benefits to kick in, or navigating a life transition, we can help connect you with temporary major medical coverage through our partner network. It's not a full replacement for long-term health insurance, but it can bridge the gap when you need it. Give us a call and we'll walk through your options.</div></div>
                 </div>
             </div>
         </div>
     </section>
+
+    <div class="wave-divider" aria-hidden="true">
+        <svg viewBox="0 0 400 100" xmlns="http://www.w3.org/2000/svg"><path d="M0 60 C60 60 80 25 140 30 C200 35 210 70 270 65 C330 60 360 30 400 40" fill="none" stroke="#1A3C5E" stroke-width="14" stroke-linecap="round"/><path d="M20 75 C80 75 110 45 160 50 C210 55 230 80 290 75 C340 71 370 50 400 55" fill="none" stroke="#1A3C5E" stroke-width="10" stroke-linecap="round"/></svg>
+    </div>
 
     <!-- FOOTER -->
     <footer class="footer">
@@ -594,7 +608,7 @@
                 <span>&copy; 2026 Peterson Insurance Group &nbsp;|&nbsp; 20 N. Main Street, Weaverville, NC 28787 &nbsp;|&nbsp; <a href="tel:8286458777">828-645-8777</a></span>
                 <span style="color: rgba(255,255,255,0.4); font-size: 0.82rem;">Serving Weaverville, Asheville, Mars Hill, Marshall, Burnsville, Spruce Pine &amp; all of WNC</span>
             </div>
-            <p style="font-size: 0.75rem; color: rgba(255,255,255,0.3); margin-top: 16px; line-height: 1.6;">Life insurance and Medicare Supplement products provided by Erie Family Life Insurance Company (home office: Erie, PA). Not available in all states. ERIE life insurance products are not available in New York. ERIE Medicare Supplement products are not available in DC or New York. Supplemental health insurance provided by AFLAC. Health insurance provided by United Healthcare. All products subject to terms, conditions, and exclusions. Contact Peterson Insurance Group for details specific to North Carolina.</p>
+            <p style="font-size: 0.75rem; color: rgba(255,255,255,0.3); margin-top: 16px; line-height: 1.6;">Life insurance and Medicare Supplement products provided by Erie Family Life Insurance Company (home office: Erie, PA). Not available in all states. ERIE life insurance products are not available in New York. ERIE Medicare Supplement products are not available in DC or New York. Short-term health coverage arranged through partner carriers. All products subject to terms, conditions, and exclusions. Contact Peterson Insurance Group for details specific to North Carolina.</p>
         </div>
     </footer>
 
