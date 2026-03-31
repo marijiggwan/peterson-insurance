@@ -1,0 +1,175 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Contact Us | Peterson Insurance Group | Weaverville, NC</title>
+    <meta name="description" content="Contact Peterson Insurance Group in Weaverville, NC. Call 828-645-8777, visit us at 20 North Main Street, or request a quote online. Open Monday-Friday 9am-5pm. Walk-ins welcome, appointments recommended.">
+    <link rel="canonical" href="https://www.petersoninsurance.group/contact">
+    <meta property="og:title" content="Contact Peterson Insurance Group | Weaverville, NC">
+    <meta property="og:description" content="Call 828-645-8777 or visit us at 20 North Main Street, Weaverville, NC. Monday-Friday 9am-5pm.">
+    <meta property="og:image" content="https://www.petersoninsurance.group/images/og-image.jpg">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,400;0,500;0,600;0,700;1,400;1,500&family=Source+Sans+3:ital,wght@0,300;0,400;0,500;0,600;0,700;1,400&display=swap" rel="stylesheet">
+    <style>
+        :root { --navy: #1A3C5E; --navy-deep: #0F2840; --blue-mid: #2D5F8B; --green-forest: #4A7A2E; --green-sage: #7BA35A; --green-light: #E8F0E0; --green-pale: #F2F7ED; --cream: #FAF8F5; --warm-white: #FDFCFA; --text-dark: #2C3440; --text-body: #4A5568; --text-light: #6B7C8F; --border-light: #E2E0DC; --shadow-soft: 0 2px 16px rgba(26,60,94,0.06); --shadow-card: 0 4px 24px rgba(26,60,94,0.08); --radius: 6px; --radius-lg: 12px; --font-heading: 'Cormorant Garamond', Georgia, serif; --font-body: 'Source Sans 3', 'Segoe UI', sans-serif; --transition: 0.3s ease; }
+        *, *::before, *::after { margin: 0; padding: 0; box-sizing: border-box; }
+        html { scroll-behavior: smooth; font-size: 16px; }
+        body { font-family: var(--font-body); color: var(--text-body); line-height: 1.7; background: var(--warm-white); -webkit-font-smoothing: antialiased; }
+        img { max-width: 100%; height: auto; display: block; }
+        a { color: var(--blue-mid); text-decoration: none; transition: color var(--transition); } a:hover { color: var(--navy); }
+        h1, h2, h3 { font-family: var(--font-heading); color: var(--navy); line-height: 1.2; font-weight: 600; }
+        h1 { font-size: clamp(2rem, 4vw, 3rem); } h2 { font-size: clamp(1.7rem, 3.2vw, 2.4rem); }
+        .container { max-width: 1140px; margin: 0 auto; padding: 0 24px; }
+        section { padding: 80px 0; }
+        .section-label { font-family: var(--font-body); font-size: 0.8rem; font-weight: 600; letter-spacing: 0.12em; text-transform: uppercase; color: var(--green-forest); margin-bottom: 0.75rem; display: flex; align-items: center; gap: 8px; }
+        .section-label .sprig { width: 16px; height: auto; opacity: 0.5; }
+        .nav { position: fixed; top: 0; left: 0; right: 0; z-index: 1000; background: rgba(255,255,255,0.97); backdrop-filter: blur(8px); border-bottom: 1px solid var(--border-light); }
+        .nav-inner { display: flex; align-items: center; justify-content: space-between; max-width: 1200px; margin: 0 auto; padding: 0 24px; height: 72px; }
+        .nav-logo img { height: 52px; width: auto; }
+        .nav-links { display: flex; align-items: center; gap: 32px; list-style: none; }
+        .nav-links a { font-family: var(--font-body); font-size: 0.9rem; font-weight: 500; color: var(--text-dark); } .nav-links a:hover { color: var(--green-forest); }
+        .nav-phone { font-weight: 600; color: var(--navy) !important; }
+        .nav-cta { background: var(--navy); color: white !important; padding: 10px 20px; border-radius: var(--radius); font-weight: 600; font-size: 0.85rem !important; }
+        .hamburger { display: none; background: none; border: none; cursor: pointer; padding: 4px; }
+        .hamburger span { display: block; width: 24px; height: 2px; background: var(--navy); margin: 5px 0; transition: var(--transition); }
+        .mobile-menu { display: none; position: fixed; top: 72px; left: 0; right: 0; background: white; padding: 24px; flex-direction: column; gap: 16px; border-bottom: 1px solid var(--border-light); z-index: 999; }
+        .mobile-menu.open { display: flex; } .mobile-menu a { font-size: 1rem; color: var(--text-dark); padding: 8px 0; }
+        .page-hero { padding: 140px 0 60px; background: linear-gradient(135deg, var(--green-pale) 0%, var(--cream) 50%, var(--warm-white) 100%); }
+
+        .contact-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 48px; align-items: start; }
+        .contact-info h2 { margin-bottom: 16px; }
+        .contact-info > p { margin-bottom: 24px; }
+        .contact-detail { display: flex; gap: 16px; margin-bottom: 20px; }
+        .contact-detail .icon { width: 44px; height: 44px; background: var(--green-pale); border-radius: 50%; display: flex; align-items: center; justify-content: center; flex-shrink: 0; }
+        .contact-detail .icon svg { width: 20px; height: 20px; color: var(--green-forest); }
+        .contact-detail strong { display: block; color: var(--navy); }
+
+        .walkin-note { background: var(--green-pale); border-radius: var(--radius); padding: 16px 20px; margin-top: 24px; }
+        .walkin-note strong { color: var(--navy); }
+
+        .map-container { border-radius: var(--radius-lg); overflow: hidden; box-shadow: var(--shadow-card); margin-top: 32px; }
+        .map-container iframe { width: 100%; height: 300px; border: 0; }
+
+        .form-card { background: white; border-radius: var(--radius-lg); padding: 32px; box-shadow: var(--shadow-card); }
+        .form-card h3 { margin-bottom: 4px; font-size: 1.4rem; }
+        .form-sub { color: var(--text-light); margin-bottom: 20px; font-size: 0.9rem; }
+        .form-row { display: grid; grid-template-columns: 1fr 1fr; gap: 16px; margin-bottom: 16px; }
+        .form-group { display: flex; flex-direction: column; }
+        .form-group.full { grid-column: 1 / -1; }
+        label { font-size: 0.85rem; font-weight: 600; color: var(--text-dark); margin-bottom: 4px; }
+        input, select, textarea { font-family: var(--font-body); font-size: 0.95rem; padding: 10px 14px; border: 1px solid var(--border-light); border-radius: var(--radius); transition: border-color var(--transition); }
+        input:focus, select:focus, textarea:focus { outline: none; border-color: var(--green-sage); }
+        .form-submit { background: var(--navy); color: white; border: none; padding: 14px 28px; border-radius: var(--radius); font-weight: 600; font-size: 0.95rem; cursor: pointer; transition: background var(--transition); width: 100%; }
+        .form-submit:hover { background: var(--blue-mid); }
+
+        .lobby-section { background: var(--cream); }
+        .lobby-section img { border-radius: var(--radius-lg); box-shadow: var(--shadow-card); max-width: 900px; margin: 0 auto; }
+
+        .footer { background: var(--navy-deep); color: rgba(255,255,255,0.7); padding: 48px 0 32px; }
+        .footer-simple { display: flex; justify-content: space-between; align-items: center; flex-wrap: wrap; gap: 12px; }
+        .footer-simple a { color: rgba(255,255,255,0.7); } .footer-simple a:hover { color: white; }
+        .fade-in { opacity: 0; transform: translateY(20px); transition: opacity 0.6s ease, transform 0.6s ease; } .fade-in.visible { opacity: 1; transform: translateY(0); }
+        @media (max-width: 768px) { .contact-grid { grid-template-columns: 1fr; } .form-row { grid-template-columns: 1fr; } .nav-links { display: none; } .hamburger { display: block; } .footer-simple { flex-direction: column; text-align: center; } }
+    </style>
+</head>
+<body>
+    <nav class="nav"><div class="nav-inner">
+        <a href="index.html" class="nav-logo"><img src="images/logo.png" alt="Peterson Insurance Group"></a>
+        <ul class="nav-links"><li><a href="index.html#services">Insurance</a></li><li><a href="about.html">About Us</a></li><li><a href="services.html">Policy Types</a></li><li><a href="index.html#faq">FAQ</a></li><li><a href="contact.html" style="color: var(--green-forest);">Contact</a></li><li><a href="tel:8286458777" class="nav-phone">828-645-8777</a></li><li><a href="#quote-form" class="nav-cta">Get a Quote</a></li></ul>
+        <button class="hamburger" id="hamburger" aria-label="Menu"><span></span><span></span><span></span></button>
+    </div></nav>
+    <div class="mobile-menu" id="mobileMenu"><a href="index.html#services">Insurance</a><a href="about.html">About Us</a><a href="services.html">Policy Types</a><a href="index.html#faq">FAQ</a><a href="contact.html">Contact</a><a href="tel:8286458777">Call: 828-645-8777</a><a href="#quote-form" class="nav-cta">Get a Quote</a></div>
+
+    <section class="page-hero">
+        <div class="container">
+            <div class="contact-grid">
+                <div class="contact-info fade-in">
+                    <span class="section-label"><svg class="sprig" viewBox="0 0 24 48" xmlns="http://www.w3.org/2000/svg"><path d="M12 48 V24" stroke="#4A7A2E" stroke-width="2" fill="none"/><path d="M12 24 C12 18 6 14 2 12 C6 12 12 16 12 20" fill="#7BA35A" opacity="0.7"/><path d="M12 20 C12 14 18 10 22 8 C18 8 12 12 12 16" fill="#4A7A2E" opacity="0.6"/><path d="M12 14 C12 8 6 4 3 2 C7 2 12 6 12 10" fill="#7BA35A" opacity="0.8"/></svg>Get in Touch</span>
+                    <h1>Let's Talk About Your Insurance</h1>
+                    <p>Whether you need a quote, have a question, or want to review your current coverage — we're here. No obligation, no pressure. Just a real conversation.</p>
+
+                    <div class="contact-detail">
+                        <div class="icon"><svg fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path d="M17.657 16.657L13.414 20.9a1.998 1.998 0 01-2.827 0l-4.244-4.243a8 8 0 1111.314 0z"/><path d="M15 11a3 3 0 11-6 0 3 3 0 016 0z"/></svg></div>
+                        <div><strong>Visit Us</strong>20 North Main Street<br>Weaverville, NC 28787</div>
+                    </div>
+                    <div class="contact-detail">
+                        <div class="icon"><svg fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path d="M22 16.92v3a2 2 0 01-2.18 2 19.79 19.79 0 01-8.63-3.07 19.5 19.5 0 01-6-6 19.79 19.79 0 01-3.07-8.67A2 2 0 014.11 2h3a2 2 0 012 1.72c.127.96.361 1.903.7 2.81a2 2 0 01-.45 2.11L8.09 9.91a16 16 0 006 6l1.27-1.27a2 2 0 012.11-.45c.907.339 1.85.573 2.81.7A2 2 0 0122 16.92z"/></svg></div>
+                        <div><strong>Call Us</strong><a href="tel:8286458777" style="color: var(--navy); font-weight: 600;">828-645-8777</a></div>
+                    </div>
+                    <div class="contact-detail">
+                        <div class="icon"><svg fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path d="M3 8l7.89 5.26a2 2 0 002.22 0L21 8M5 19h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z"/></svg></div>
+                        <div><strong>Email</strong><a href="mailto:info@petersoninsurance.group">info@petersoninsurance.group</a></div>
+                    </div>
+                    <div class="contact-detail">
+                        <div class="icon"><svg fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path d="M12 8v4l3 3m6-3a9 9 0 11-18 0 9 9 0 0118 0z"/></svg></div>
+                        <div><strong>Office Hours</strong>Monday – Friday: 9:00 AM – 5:00 PM</div>
+                    </div>
+
+                    <div class="walkin-note">
+                        <p><strong>Walk-ins are welcome.</strong> To avoid potential wait times, making an appointment is recommended. Call or use the form to schedule a time that works for you.</p>
+                    </div>
+
+                    <div class="map-container">
+                        <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3244.1!2d-82.5607!3d35.6971!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x0%3A0x0!2zMzXCsDQxJzQ5LjYiTiA4MsKwMzMnMzguNSJX!5e0!3m2!1sen!2sus!4v1" allowfullscreen loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+                    </div>
+                </div>
+
+                <div class="form-card fade-in" id="quote-form">
+                    <h3>Request a Free Quote</h3>
+                    <p class="form-sub">We'll get back to you within one business day.</p>
+                    <form name="quote-contact" method="POST" data-netlify="true">
+                        <input type="hidden" name="form-name" value="quote-contact">
+                        <div class="form-row">
+                            <div class="form-group"><label for="name">Full Name</label><input type="text" id="name" name="name" required></div>
+                            <div class="form-group"><label for="phone">Phone</label><input type="tel" id="phone" name="phone" required></div>
+                        </div>
+                        <div class="form-row">
+                            <div class="form-group"><label for="email">Email</label><input type="email" id="email" name="email" required></div>
+                            <div class="form-group"><label for="insurance-type">Insurance Type</label>
+                                <select id="insurance-type" name="insurance-type">
+                                    <option value="">Select one...</option>
+                                    <option value="auto">Auto</option>
+                                    <option value="homeowners">Homeowners</option>
+                                    <option value="renters">Renters</option>
+                                    <option value="business">Business / Commercial</option>
+                                    <option value="life">Life Insurance</option>
+                                    <option value="health">Health / Medicare</option>
+                                    <option value="flood">Flood</option>
+                                    <option value="boat-rv">Boat / RV / Motorcycle</option>
+                                    <option value="other">Other / Not Sure</option>
+                                </select>
+                            </div>
+                        </div>
+                        <div class="form-group full" style="margin-bottom: 16px;"><label for="message">Tell us a little about what you need</label><textarea id="message" name="message" rows="4"></textarea></div>
+                        <button type="submit" class="form-submit">Send My Quote Request</button>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- LOBBY PHOTO -->
+    <section class="lobby-section">
+        <div class="container fade-in" style="text-align: center;">
+            <h2>This Is What You'll Walk Into</h2>
+            <p style="max-width: 600px; margin: 12px auto 24px;">No sterile office. No corporate waiting room. Just a comfortable space where you can sit down, have a conversation, and figure out your insurance.</p>
+            <img src="images/lobby-wide.jpg" alt="Peterson Insurance Group office lobby with comfortable seating, kids corner, and welcoming atmosphere" loading="lazy">
+        </div>
+    </section>
+
+    <footer class="footer"><div class="container"><div class="footer-simple">
+        <span>&copy; 2026 Peterson Insurance Group &nbsp;|&nbsp; 20 N. Main Street, Weaverville, NC 28787 &nbsp;|&nbsp; <a href="tel:8286458777">828-645-8777</a></span>
+        <span style="color: rgba(255,255,255,0.4); font-size: 0.82rem;">Serving Weaverville, Asheville, Mars Hill, Marshall, Burnsville, Spruce Pine &amp; all of WNC</span>
+    </div><p style="font-size: 0.72rem; color: rgba(255,255,255,0.25); margin-top: 16px;">Photography by Ryan Theede Photography and Kara Dahlberg</p></div></footer>
+
+    <script>
+        const hamburger=document.getElementById('hamburger'),mobileMenu=document.getElementById('mobileMenu');
+        hamburger.addEventListener('click',()=>{mobileMenu.classList.toggle('open');const s=hamburger.querySelectorAll('span');if(mobileMenu.classList.contains('open')){s[0].style.transform='rotate(45deg) translate(5px,5px)';s[1].style.opacity='0';s[2].style.transform='rotate(-45deg) translate(5px,-5px)';}else{s[0].style.transform='';s[1].style.opacity='';s[2].style.transform='';}});
+        const observer=new IntersectionObserver(entries=>{entries.forEach(e=>{if(e.isIntersecting){e.target.classList.add('visible');observer.unobserve(e.target);}});},{threshold:0.1,rootMargin:'0px 0px -40px 0px'});
+        document.querySelectorAll('.fade-in').forEach(el=>observer.observe(el));
+        document.querySelectorAll('a[href^="#"]').forEach(a=>{a.addEventListener('click',function(e){e.preventDefault();const t=document.querySelector(this.getAttribute('href'));if(t)window.scrollTo({top:t.offsetTop-100,behavior:'smooth'});});});
+    </script>
+</body>
+</html>

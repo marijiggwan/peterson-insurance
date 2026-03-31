@@ -1,0 +1,187 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Insurance Services | Peterson Insurance Group | Weaverville, NC</title>
+    <meta name="description" content="Peterson Insurance Group offers auto, home, business, life, health, flood, motorcycle, RV, boat, and specialty insurance in Weaverville, NC. Independent agency representing multiple carriers including Erie Insurance. Serving Western North Carolina since 2001.">
+    <link rel="canonical" href="https://www.petersoninsurance.group/services">
+    <meta property="og:title" content="Insurance Services | Peterson Insurance Group | Weaverville, NC">
+    <meta property="og:description" content="Full-service independent insurance agency. Auto, home, business, life, health, and specialty coverage from multiple carriers.">
+    <meta property="og:image" content="https://www.petersoninsurance.group/images/og-image.jpg">
+    <meta property="og:url" content="https://www.petersoninsurance.group/services">
+    <meta property="og:type" content="website">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,400;0,500;0,600;0,700;1,400;1,500&family=Source+Sans+3:ital,wght@0,300;0,400;0,500;0,600;0,700;1,400&display=swap" rel="stylesheet">
+    <style>
+        :root { --navy: #1A3C5E; --navy-deep: #0F2840; --blue-mid: #2D5F8B; --green-forest: #4A7A2E; --green-sage: #7BA35A; --green-light: #E8F0E0; --green-pale: #F2F7ED; --cream: #FAF8F5; --warm-white: #FDFCFA; --warm-bg: #F7F5F0; --text-dark: #2C3440; --text-body: #4A5568; --text-light: #6B7C8F; --border-light: #E2E0DC; --shadow-soft: 0 2px 16px rgba(26,60,94,0.06); --shadow-card: 0 4px 24px rgba(26,60,94,0.08); --radius: 6px; --radius-lg: 12px; --font-heading: 'Cormorant Garamond', Georgia, serif; --font-body: 'Source Sans 3', 'Segoe UI', sans-serif; --transition: 0.3s ease; }
+        *, *::before, *::after { margin: 0; padding: 0; box-sizing: border-box; }
+        html { scroll-behavior: smooth; font-size: 16px; }
+        body { font-family: var(--font-body); color: var(--text-body); line-height: 1.7; background: var(--warm-white); -webkit-font-smoothing: antialiased; }
+        img { max-width: 100%; height: auto; display: block; }
+        a { color: var(--blue-mid); text-decoration: none; transition: color var(--transition); } a:hover { color: var(--navy); }
+        h1, h2, h3 { font-family: var(--font-heading); color: var(--navy); line-height: 1.2; font-weight: 600; }
+        h1 { font-size: clamp(2rem, 4vw, 3rem); } h2 { font-size: clamp(1.7rem, 3.2vw, 2.4rem); } h3 { font-size: clamp(1.25rem, 2.2vw, 1.5rem); }
+        .container { max-width: 1140px; margin: 0 auto; padding: 0 24px; }
+        section { padding: 80px 0; }
+        .section-label { font-family: var(--font-body); font-size: 0.8rem; font-weight: 600; letter-spacing: 0.12em; text-transform: uppercase; color: var(--green-forest); margin-bottom: 0.75rem; display: flex; align-items: center; gap: 8px; }
+        .section-label .sprig { width: 16px; height: auto; opacity: 0.5; }
+        .wave-divider { display: flex; justify-content: center; padding: 16px 0; } .wave-divider svg { width: 200px; height: auto; opacity: 0.35; }
+        .nav { position: fixed; top: 0; left: 0; right: 0; z-index: 1000; background: rgba(255,255,255,0.97); backdrop-filter: blur(8px); border-bottom: 1px solid var(--border-light); }
+        .nav-inner { display: flex; align-items: center; justify-content: space-between; max-width: 1200px; margin: 0 auto; padding: 0 24px; height: 72px; }
+        .nav-logo img { height: 52px; width: auto; }
+        .nav-links { display: flex; align-items: center; gap: 32px; list-style: none; }
+        .nav-links a { font-family: var(--font-body); font-size: 0.9rem; font-weight: 500; color: var(--text-dark); } .nav-links a:hover { color: var(--green-forest); }
+        .nav-phone { font-weight: 600; color: var(--navy) !important; }
+        .nav-cta { background: var(--navy); color: white !important; padding: 10px 20px; border-radius: var(--radius); font-weight: 600; font-size: 0.85rem !important; }
+        .hamburger { display: none; background: none; border: none; cursor: pointer; padding: 4px; }
+        .hamburger span { display: block; width: 24px; height: 2px; background: var(--navy); margin: 5px 0; transition: var(--transition); }
+        .mobile-menu { display: none; position: fixed; top: 72px; left: 0; right: 0; background: white; padding: 24px; flex-direction: column; gap: 16px; border-bottom: 1px solid var(--border-light); z-index: 999; }
+        .mobile-menu.open { display: flex; } .mobile-menu a { font-size: 1rem; color: var(--text-dark); padding: 8px 0; }
+        .page-hero { padding: 140px 0 60px; background: linear-gradient(135deg, var(--green-pale) 0%, var(--cream) 50%, var(--warm-white) 100%); text-align: center; }
+        .page-hero h1 { margin-bottom: 16px; }
+        .page-hero .lead { font-size: 1.1rem; color: var(--text-dark); max-width: 700px; margin: 0 auto; }
+
+        .service-hub-grid { display: grid; grid-template-columns: repeat(2, 1fr); gap: 28px; margin-top: 40px; }
+        .service-hub-card {
+            background: white; border-radius: var(--radius-lg); padding: 32px;
+            box-shadow: var(--shadow-soft); display: flex; gap: 20px; align-items: flex-start;
+            transition: box-shadow var(--transition), transform var(--transition);
+            text-decoration: none; color: inherit; border-left: 4px solid transparent;
+        }
+        .service-hub-card:hover { box-shadow: var(--shadow-card); transform: translateY(-3px); border-left-color: var(--green-sage); color: inherit; }
+        .service-hub-card .card-icon { width: 52px; height: 52px; background: var(--green-pale); border-radius: 50%; display: flex; align-items: center; justify-content: center; flex-shrink: 0; }
+        .service-hub-card .card-icon svg { width: 26px; height: 26px; color: var(--green-forest); }
+        .service-hub-card h3 { margin-bottom: 6px; }
+        .service-hub-card p { font-size: 0.93rem; margin-bottom: 10px; }
+        .service-hub-card .card-tags { display: flex; flex-wrap: wrap; gap: 6px; }
+        .service-hub-card .tag { background: var(--green-pale); color: var(--green-forest); font-size: 0.75rem; font-weight: 600; padding: 3px 10px; border-radius: 20px; }
+        .service-hub-card .card-link { font-size: 0.88rem; font-weight: 600; color: var(--blue-mid); display: flex; align-items: center; gap: 4px; margin-top: 12px; }
+
+        .providers-section { background: var(--cream); text-align: center; }
+        .providers-list { display: flex; flex-wrap: wrap; justify-content: center; gap: 16px; margin-top: 24px; }
+        .provider-pill { background: white; padding: 10px 20px; border-radius: var(--radius); font-weight: 600; color: var(--navy); font-size: 0.9rem; box-shadow: var(--shadow-soft); }
+
+        .cta-section { background: var(--navy-deep); color: white; text-align: center; }
+        .cta-section h2 { color: white; margin-bottom: 12px; }
+        .cta-section p { color: rgba(255,255,255,0.8); max-width: 600px; margin: 0 auto 24px; }
+        .btn-primary { display: inline-flex; align-items: center; gap: 8px; background: white; color: var(--navy); padding: 14px 28px; border-radius: var(--radius); font-weight: 600; transition: all var(--transition); }
+        .btn-primary:hover { background: var(--green-light); color: var(--navy); }
+        .btn-outline-light { display: inline-flex; align-items: center; gap: 8px; border: 2px solid rgba(255,255,255,0.5); color: white; padding: 12px 24px; border-radius: var(--radius); font-weight: 600; transition: all var(--transition); }
+        .btn-outline-light:hover { border-color: white; background: rgba(255,255,255,0.1); color: white; }
+
+        .footer { background: var(--navy-deep); color: rgba(255,255,255,0.7); padding: 48px 0 32px; }
+        .footer-simple { display: flex; justify-content: space-between; align-items: center; flex-wrap: wrap; gap: 12px; }
+        .footer-simple a { color: rgba(255,255,255,0.7); } .footer-simple a:hover { color: white; }
+        .fade-in { opacity: 0; transform: translateY(20px); transition: opacity 0.6s ease, transform 0.6s ease; } .fade-in.visible { opacity: 1; transform: translateY(0); }
+        @media (max-width: 768px) { .service-hub-grid { grid-template-columns: 1fr; } .nav-links { display: none; } .hamburger { display: block; } .footer-simple { flex-direction: column; text-align: center; } .service-hub-card { flex-direction: column; } }
+    </style>
+</head>
+<body>
+    <nav class="nav"><div class="nav-inner">
+        <a href="index.html" class="nav-logo"><img src="images/logo.png" alt="Peterson Insurance Group"></a>
+        <ul class="nav-links"><li><a href="index.html#services">Insurance</a></li><li><a href="about.html">About Us</a></li><li><a href="services.html" style="color: var(--green-forest);">Policy Types</a></li><li><a href="index.html#faq">FAQ</a></li><li><a href="index.html#contact">Contact</a></li><li><a href="tel:8286458777" class="nav-phone">828-645-8777</a></li><li><a href="index.html#contact" class="nav-cta">Get a Quote</a></li></ul>
+        <button class="hamburger" id="hamburger" aria-label="Menu"><span></span><span></span><span></span></button>
+    </div></nav>
+    <div class="mobile-menu" id="mobileMenu"><a href="index.html#services">Insurance</a><a href="about.html">About Us</a><a href="services.html">Policy Types</a><a href="index.html#faq">FAQ</a><a href="index.html#contact">Contact</a><a href="tel:8286458777">Call: 828-645-8777</a><a href="index.html#contact" class="nav-cta">Get a Quote</a></div>
+
+    <section class="page-hero">
+        <div class="container fade-in">
+            <span class="section-label" style="justify-content: center;"><svg class="sprig" viewBox="0 0 24 48" xmlns="http://www.w3.org/2000/svg"><path d="M12 48 V24" stroke="#4A7A2E" stroke-width="2" fill="none"/><path d="M12 24 C12 18 6 14 2 12 C6 12 12 16 12 20" fill="#7BA35A" opacity="0.7"/><path d="M12 20 C12 14 18 10 22 8 C18 8 12 12 12 16" fill="#4A7A2E" opacity="0.6"/><path d="M12 14 C12 8 6 4 3 2 C7 2 12 6 12 10" fill="#7BA35A" opacity="0.8"/></svg>Our Insurance Services</span>
+            <h1>Coverage for Your Whole Life</h1>
+            <p class="lead">We're a full-service independent agency — which means we handle everything from your car insurance to your business coverage to your family's life insurance. One agency, one relationship, all your policies in one place.</p>
+        </div>
+    </section>
+
+    <div class="wave-divider" aria-hidden="true"><svg viewBox="0 0 400 100" xmlns="http://www.w3.org/2000/svg"><path d="M0 60 C60 60 80 25 140 30 C200 35 210 70 270 65 C330 60 360 30 400 40" fill="none" stroke="#1A3C5E" stroke-width="14" stroke-linecap="round"/><path d="M20 75 C80 75 110 45 160 50 C210 55 230 80 290 75 C340 71 370 50 400 55" fill="none" stroke="#1A3C5E" stroke-width="10" stroke-linecap="round"/></svg></div>
+
+    <section>
+        <div class="container">
+            <div class="service-hub-grid">
+                <a href="auto-vehicle.html" class="service-hub-card fade-in">
+                    <div class="card-icon"><svg fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path d="M8 17h8M8 17l-2 0a2 2 0 01-2-2V9a2 2 0 012-2h1l2-3h6l2 3h1a2 2 0 012 2v6a2 2 0 01-2 2h-2M8 17v2m8-2v2"/></svg></div>
+                    <div>
+                        <h3>Auto &amp; Vehicle</h3>
+                        <p>Cars, trucks, motorcycles, RVs, boats, ATVs, and classic/collector vehicles. We shop across Erie, Progressive, Travelers, and more.</p>
+                        <div class="card-tags"><span class="tag">Auto</span><span class="tag">Motorcycle</span><span class="tag">RV</span><span class="tag">Boat</span><span class="tag">Classic</span></div>
+                        <div class="card-link">See coverage details <svg width="14" height="14" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path d="M5 12h14M12 5l7 7-7 7"/></svg></div>
+                    </div>
+                </a>
+                <a href="home-property.html" class="service-hub-card fade-in">
+                    <div class="card-icon"><svg fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path d="M3 12l2-2m0 0l7-7 7 7M5 10v10a1 1 0 001 1h3m10-11l2 2m-2-2v10a1 1 0 01-1 1h-3m-6 0a1 1 0 001-1v-4a1 1 0 011-1h2a1 1 0 011 1v4a1 1 0 001 1m-6 0h6"/></svg></div>
+                    <div>
+                        <h3>Home &amp; Property</h3>
+                        <p>Homeowners, renters, flood, mobile home, tiny home, investment property, vacant dwelling, and umbrella coverage.</p>
+                        <div class="card-tags"><span class="tag">Homeowners</span><span class="tag">Renters</span><span class="tag">Flood</span><span class="tag">Mobile Home</span></div>
+                        <div class="card-link">See coverage details <svg width="14" height="14" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path d="M5 12h14M12 5l7 7-7 7"/></svg></div>
+                    </div>
+                </a>
+                <a href="business.html" class="service-hub-card fade-in">
+                    <div class="card-icon"><svg fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path d="M19 21V5a2 2 0 00-2-2H7a2 2 0 00-2 2v16m14 0h2m-2 0h-5m-9 0H3m2 0h5M9 7h1m-1 4h1m4-4h1m-1 4h1m-5 10v-5a1 1 0 011-1h2a1 1 0 011 1v5m-4 0h4"/></svg></div>
+                    <div>
+                        <h3>Business Insurance</h3>
+                        <p>General liability, commercial auto, workers comp, commercial property, bonds, professional liability, and business owner's policies.</p>
+                        <div class="card-tags"><span class="tag">General Liability</span><span class="tag">Commercial Auto</span><span class="tag">Workers Comp</span><span class="tag">BOP</span></div>
+                        <div class="card-link">See coverage details <svg width="14" height="14" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path d="M5 12h14M12 5l7 7-7 7"/></svg></div>
+                    </div>
+                </a>
+                <a href="life-health.html" class="service-hub-card fade-in">
+                    <div class="card-icon"><svg fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path d="M4.318 6.318a4.5 4.5 0 000 6.364L12 20.364l7.682-7.682a4.5 4.5 0 00-6.364-6.364L12 7.636l-1.318-1.318a4.5 4.5 0 00-6.364 0z"/></svg></div>
+                    <div>
+                        <h3>Life &amp; Health</h3>
+                        <p>Term life, whole life, universal life, ERIExpress, Medicare Supplement plans through Erie, and short-term health coverage.</p>
+                        <div class="card-tags"><span class="tag">Term Life</span><span class="tag">Whole Life</span><span class="tag">Medicare Supp</span><span class="tag">ERIExpress</span></div>
+                        <div class="card-link">See coverage details <svg width="14" height="14" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path d="M5 12h14M12 5l7 7-7 7"/></svg></div>
+                    </div>
+                </a>
+            </div>
+        </div>
+    </section>
+
+    <div class="wave-divider" aria-hidden="true"><svg viewBox="0 0 400 100" xmlns="http://www.w3.org/2000/svg"><path d="M0 60 C60 60 80 25 140 30 C200 35 210 70 270 65 C330 60 360 30 400 40" fill="none" stroke="#1A3C5E" stroke-width="14" stroke-linecap="round"/><path d="M20 75 C80 75 110 45 160 50 C210 55 230 80 290 75 C340 71 370 50 400 55" fill="none" stroke="#1A3C5E" stroke-width="10" stroke-linecap="round"/></svg></div>
+
+    <section class="providers-section">
+        <div class="container fade-in">
+            <span class="section-label" style="justify-content: center;"><svg class="sprig" viewBox="0 0 24 48" xmlns="http://www.w3.org/2000/svg"><path d="M12 48 V24" stroke="#4A7A2E" stroke-width="2" fill="none"/><path d="M12 24 C12 18 6 14 2 12 C6 12 12 16 12 20" fill="#7BA35A" opacity="0.7"/><path d="M12 20 C12 14 18 10 22 8 C18 8 12 12 12 16" fill="#4A7A2E" opacity="0.6"/><path d="M12 14 C12 8 6 4 3 2 C7 2 12 6 12 10" fill="#7BA35A" opacity="0.8"/></svg>Our Carriers</span>
+            <h2>We Represent Multiple Insurance Companies</h2>
+            <p style="max-width: 640px; margin: 12px auto 0;">As an independent agency, we work for you — not one carrier. We shop across all of these companies to find the best coverage for your situation.</p>
+            <div class="providers-list">
+                <span class="provider-pill">Erie Insurance</span>
+                <span class="provider-pill">Progressive</span>
+                <span class="provider-pill">Travelers</span>
+                <span class="provider-pill">Liberty Mutual</span>
+                <span class="provider-pill">The Hartford</span>
+                <span class="provider-pill">National General</span>
+                <span class="provider-pill">Foremost</span>
+                <span class="provider-pill">Piedmont Mutual</span>
+                <span class="provider-pill">Hagerty</span>
+                <span class="provider-pill">&amp; more</span>
+            </div>
+        </div>
+    </section>
+
+    <section class="cta-section">
+        <div class="container fade-in">
+            <h2>Not Sure What You Need?</h2>
+            <p>That's exactly why we're here. Tell us about your situation and we'll help you figure out the right coverage — no pressure, no jargon.</p>
+            <div style="display: flex; gap: 16px; justify-content: center; flex-wrap: wrap;">
+                <a href="index.html#contact" class="btn-primary">Get a Free Quote <svg width="16" height="16" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path d="M5 12h14M12 5l7 7-7 7"/></svg></a>
+                <a href="tel:8286458777" class="btn-outline-light"><svg width="16" height="16" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path d="M22 16.92v3a2 2 0 01-2.18 2 19.79 19.79 0 01-8.63-3.07 19.5 19.5 0 01-6-6 19.79 19.79 0 01-3.07-8.67A2 2 0 014.11 2h3a2 2 0 012 1.72c.127.96.361 1.903.7 2.81a2 2 0 01-.45 2.11L8.09 9.91a16 16 0 006 6l1.27-1.27a2 2 0 012.11-.45c.907.339 1.85.573 2.81.7A2 2 0 0122 16.92z"/></svg> 828-645-8777</a>
+            </div>
+        </div>
+    </section>
+
+    <footer class="footer"><div class="container"><div class="footer-simple">
+        <span>&copy; 2026 Peterson Insurance Group &nbsp;|&nbsp; 20 N. Main Street, Weaverville, NC 28787 &nbsp;|&nbsp; <a href="tel:8286458777">828-645-8777</a></span>
+        <span style="color: rgba(255,255,255,0.4); font-size: 0.82rem;">Serving Weaverville, Asheville, Mars Hill, Marshall, Burnsville, Spruce Pine &amp; all of WNC</span>
+    </div><p style="font-size: 0.72rem; color: rgba(255,255,255,0.25); margin-top: 16px;">Photography by Ryan Theede Photography and Kara Dahlberg</p></div></footer>
+
+    <script>
+        const hamburger=document.getElementById('hamburger'),mobileMenu=document.getElementById('mobileMenu');
+        hamburger.addEventListener('click',()=>{mobileMenu.classList.toggle('open');const s=hamburger.querySelectorAll('span');if(mobileMenu.classList.contains('open')){s[0].style.transform='rotate(45deg) translate(5px,5px)';s[1].style.opacity='0';s[2].style.transform='rotate(-45deg) translate(5px,-5px)';}else{s[0].style.transform='';s[1].style.opacity='';s[2].style.transform='';}});
+        const observer=new IntersectionObserver(entries=>{entries.forEach(e=>{if(e.isIntersecting){e.target.classList.add('visible');observer.unobserve(e.target);}});},{threshold:0.1,rootMargin:'0px 0px -40px 0px'});
+        document.querySelectorAll('.fade-in').forEach(el=>observer.observe(el));
+    </script>
+</body>
+</html>
