@@ -87,7 +87,10 @@
 
         .page-hero { padding: 140px 0 60px; background: linear-gradient(135deg, var(--green-pale) 0%, var(--cream) 50%, var(--warm-white) 100%); }
         .page-hero h1 { margin-bottom: 16px; }
-        .page-hero .lead { font-size: 1.1rem; color: var(--text-dark); line-height: 1.7; max-width: 720px; }
+        .page-hero .lead { font-size: 1.1rem; color: var(--text-dark); line-height: 1.7; }
+        .hero-split { display: grid; grid-template-columns: 1fr 1fr; gap: 48px; align-items: center; }
+        .hero-image { border-radius: var(--radius-lg); overflow: hidden; box-shadow: var(--shadow-card); }
+        .hero-image img { width: 100%; display: block; }
 
         /* VEHICLE TYPE CARDS */
         .vehicle-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 24px; margin-top: 40px; }
@@ -156,6 +159,8 @@
             .nc-grid { grid-template-columns: 1fr; }
             .hagerty-grid { grid-template-columns: 1fr; }
             .hagerty-features { grid-template-columns: 1fr; }
+            .hero-split { grid-template-columns: 1fr; }
+            .hero-image { order: -1; }
             .nav-links { display: none; } .hamburger { display: block; }
             .footer-simple { flex-direction: column; text-align: center; }
         }
@@ -179,10 +184,17 @@
     <div class="mobile-menu" id="mobileMenu"><a href="index.html#services">Insurance</a><a href="about.html">About Us</a><a href="services.html">Policy Types</a><a href="index.html#faq">FAQ</a><a href="index.html#contact">Contact</a><a href="tel:8286458777">Call: 828-645-8777</a><a href="index.html#contact" class="nav-cta">Get a Quote</a></div>
 
     <section class="page-hero">
-        <div class="container fade-in">
-            <span class="section-label"><svg class="sprig" viewBox="0 0 24 48" xmlns="http://www.w3.org/2000/svg"><path d="M12 48 V24" stroke="#4A7A2E" stroke-width="2" fill="none"/><path d="M12 24 C12 18 6 14 2 12 C6 12 12 16 12 20" fill="#7BA35A" opacity="0.7"/><path d="M12 20 C12 14 18 10 22 8 C18 8 12 12 12 16" fill="#4A7A2E" opacity="0.6"/><path d="M12 14 C12 8 6 4 3 2 C7 2 12 6 12 10" fill="#7BA35A" opacity="0.8"/></svg>Auto &amp; Vehicle Insurance</span>
-            <h1>Coverage for Everything <br>You Drive, Ride, or Tow</h1>
-            <p class="lead">From your daily driver to your weekend boat, your work truck to your grandfather's classic Mustang — we shop across multiple carriers to find the right coverage at a competitive price. No comparison websites needed. That's our job.</p>
+        <div class="container">
+            <div class="hero-split fade-in">
+                <div>
+                    <span class="section-label"><svg class="sprig" viewBox="0 0 24 48" xmlns="http://www.w3.org/2000/svg"><path d="M12 48 V24" stroke="#4A7A2E" stroke-width="2" fill="none"/><path d="M12 24 C12 18 6 14 2 12 C6 12 12 16 12 20" fill="#7BA35A" opacity="0.7"/><path d="M12 20 C12 14 18 10 22 8 C18 8 12 12 12 16" fill="#4A7A2E" opacity="0.6"/><path d="M12 14 C12 8 6 4 3 2 C7 2 12 6 12 10" fill="#7BA35A" opacity="0.8"/></svg>Auto &amp; Vehicle Insurance</span>
+                    <h1>Coverage for Everything <br>You Drive, Ride, or Tow</h1>
+                    <p class="lead">From your daily driver to your weekend boat, your work truck to your grandfather's classic Mustang — we shop across multiple carriers to find the right coverage at a competitive price. No comparison websites needed. That's our job.</p>
+                </div>
+                <div class="hero-image">
+                    <img src="images/freeway-mountains.jpg" alt="Cars and trucks driving on highway through Western North Carolina mountains" loading="eager">
+                </div>
+            </div>
         </div>
     </section>
 
@@ -213,7 +225,7 @@
                     <div class="carriers">Progressive, Foremost, National General</div>
                 </div>
                 <div class="vehicle-card fade-in">
-                    <h3><svg fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path d="M20.354 15.354A9 9 0 018.646 3.646 9.003 9.003 0 0012 21a9.003 9.003 0 008.354-5.646z"/></svg> Boat &amp; Watercraft</h3>
+                    <h3><svg fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path d="M12 2v6m0 0a4 4 0 014 4H8a4 4 0 014-4zm-8 8c0 4.418 3.582 8 8 8s8-3.582 8-8M5 18c1.5 1.333 3.5 2 5 2m4 0c1.5-.667 3.5-1.333 5-2"/></svg> Boat &amp; Watercraft</h3>
                     <p>Bass boats, pontoons, jet skis, sailboats. Whether you're on the lake or the river, boat insurance covers hull damage, liability, passengers, and your equipment.</p>
                     <div class="carriers">Progressive, Travelers, Foremost</div>
                 </div>
@@ -329,7 +341,7 @@
     <footer class="footer"><div class="container"><div class="footer-simple">
         <span>&copy; 2026 Peterson Insurance Group &nbsp;|&nbsp; 20 N. Main Street, Weaverville, NC 28787 &nbsp;|&nbsp; <a href="tel:8286458777">828-645-8777</a></span>
         <span style="color: rgba(255,255,255,0.4); font-size: 0.82rem;">Serving Weaverville, Asheville, Mars Hill, Marshall, Burnsville, Spruce Pine &amp; all of WNC</span>
-    </div></div></footer>
+    </div><p style="font-size: 0.72rem; color: rgba(255,255,255,0.25); margin-top: 16px;">Photography by Ryan Theede Photography and Kara Dahlberg</p></div></footer>
 
     <script>
         const hamburger=document.getElementById('hamburger'),mobileMenu=document.getElementById('mobileMenu');

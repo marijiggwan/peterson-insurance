@@ -101,7 +101,10 @@
         /* PAGE HERO */
         .page-hero { padding: 140px 0 60px; background: linear-gradient(135deg, var(--green-pale) 0%, var(--cream) 50%, var(--warm-white) 100%); }
         .page-hero h1 { margin-bottom: 16px; }
-        .page-hero .lead { font-size: 1.1rem; color: var(--text-dark); line-height: 1.7; max-width: 720px; }
+        .page-hero .lead { font-size: 1.1rem; color: var(--text-dark); line-height: 1.7; }
+        .hero-split { display: grid; grid-template-columns: 1fr 1fr; gap: 48px; align-items: center; }
+        .hero-image { border-radius: var(--radius-lg); overflow: hidden; box-shadow: var(--shadow-card); }
+        .hero-image img { width: 100%; display: block; }
 
         /* COVERAGE CARDS */
         .coverage-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); gap: 28px; margin-top: 40px; }
@@ -168,6 +171,8 @@
         @media (max-width: 768px) {
             .coverage-grid { grid-template-columns: 1fr; }
             .bop-grid { grid-template-columns: 1fr; }
+            .hero-split { grid-template-columns: 1fr; }
+            .hero-image { order: -1; }
             .nav-links { display: none; }
             .hamburger { display: block; }
             .footer-simple { flex-direction: column; text-align: center; }
@@ -203,10 +208,17 @@
 
     <!-- PAGE HERO -->
     <section class="page-hero">
-        <div class="container fade-in">
-            <span class="section-label"><svg class="sprig" viewBox="0 0 24 48" xmlns="http://www.w3.org/2000/svg"><path d="M12 48 V24" stroke="#4A7A2E" stroke-width="2" fill="none"/><path d="M12 24 C12 18 6 14 2 12 C6 12 12 16 12 20" fill="#7BA35A" opacity="0.7"/><path d="M12 20 C12 14 18 10 22 8 C18 8 12 12 12 16" fill="#4A7A2E" opacity="0.6"/><path d="M12 14 C12 8 6 4 3 2 C7 2 12 6 12 10" fill="#7BA35A" opacity="0.8"/></svg>Business Insurance</span>
-            <h1>Protect Your Business <br>Without the Complexity</h1>
-            <p class="lead">Whether you're a one-person operation on Main Street or managing a crew across Western NC, we build commercial coverage that actually fits your business — not a template from a website. We sit down with you, understand what you do, and put together a policy that makes sense.</p>
+        <div class="container">
+            <div class="hero-split fade-in">
+                <div>
+                    <span class="section-label"><svg class="sprig" viewBox="0 0 24 48" xmlns="http://www.w3.org/2000/svg"><path d="M12 48 V24" stroke="#4A7A2E" stroke-width="2" fill="none"/><path d="M12 24 C12 18 6 14 2 12 C6 12 12 16 12 20" fill="#7BA35A" opacity="0.7"/><path d="M12 20 C12 14 18 10 22 8 C18 8 12 12 12 16" fill="#4A7A2E" opacity="0.6"/><path d="M12 14 C12 8 6 4 3 2 C7 2 12 6 12 10" fill="#7BA35A" opacity="0.8"/></svg>Business Insurance</span>
+                    <h1>Protect Your Business <br>Without the Complexity</h1>
+                    <p class="lead">Whether you're a one-person operation on Main Street or managing a crew across Western NC, we build commercial coverage that actually fits your business — not a template from a website. We sit down with you, understand what you do, and put together a policy that makes sense.</p>
+                </div>
+                <div class="hero-image">
+                    <img src="images/main-street-mural.jpg" alt="Welcome to Main Street mural in downtown Weaverville, NC" loading="eager">
+                </div>
+            </div>
         </div>
     </section>
 
