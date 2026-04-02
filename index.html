@@ -182,17 +182,18 @@
         .container { max-width: 1140px; margin: 0 auto; padding: 0 24px; }
         section { padding: 80px 0; }
 
-        /* ===== BRAND ELEMENTS: WAVE & SPRIG ===== */
-        .wave-divider {
+        /* ===== BRAND ELEMENTS: SECTION BREAK & SPRIG ===== */
+        .section-break {
             display: flex; justify-content: center; align-items: center;
-            padding: 16px 0; overflow: hidden; position: relative;
+            padding: 8px 0; overflow: hidden; position: relative;
         }
-        .wave-divider svg {
-            width: 200px; height: auto; opacity: 0.35;
+        .section-break::before {
+            content: ''; width: 120px; height: 2px;
+            background: linear-gradient(90deg, transparent, var(--green-sage), transparent);
         }
-        .wave-divider.wave-light svg { opacity: 0.25; }
-        .wave-divider.wave-on-dark svg { opacity: 0.4; }
-        .wave-divider.wave-on-dark svg path { fill: #ffffff; }
+        .section-break.break-on-dark::before {
+            background: linear-gradient(90deg, transparent, rgba(255,255,255,0.2), transparent);
+        }
 
         .section-label {
             font-family: var(--font-body); font-size: 0.8rem; font-weight: 600;
@@ -220,9 +221,9 @@
         .nav.scrolled { box-shadow: var(--shadow-soft); }
         .nav-inner {
             display: flex; align-items: center; justify-content: space-between;
-            max-width: 1200px; margin: 0 auto; padding: 0 24px; height: 72px;
+            max-width: 1200px; margin: 0 auto; padding: 0 24px; height: 80px;
         }
-        .nav-logo img { height: 52px; width: auto; }
+        .nav-logo img { height: 62px; width: auto; }
         .nav-links { display: flex; align-items: center; gap: 32px; list-style: none; }
         .nav-links a {
             font-family: var(--font-body); font-size: 0.9rem; font-weight: 500;
@@ -236,18 +237,18 @@
         .nav-links a:hover { color: var(--navy); }
         .nav-cta {
             display: inline-flex; align-items: center; gap: 8px; padding: 10px 22px;
-            background: var(--navy); color: white !important; border-radius: var(--radius);
+            background: var(--green-forest); color: white !important; border-radius: var(--radius);
             font-weight: 600; font-size: 0.88rem; transition: all var(--transition);
         }
         .nav-cta::after { display: none !important; }
-        .nav-cta:hover { background: var(--navy-deep); color: white !important; transform: translateY(-1px); box-shadow: 0 4px 12px rgba(26, 60, 94, 0.2); }
+        .nav-cta:hover { background: #3D6625; color: white !important; transform: translateY(-1px); box-shadow: 0 4px 12px rgba(74, 122, 46, 0.25); }
         .nav-phone { font-weight: 600; color: var(--navy) !important; font-size: 0.95rem; }
         .hamburger { display: none; flex-direction: column; gap: 5px; background: none; border: none; cursor: pointer; padding: 4px; }
         .hamburger span { width: 24px; height: 2px; background: var(--navy); transition: all var(--transition); }
 
         /* ===== HERO — WARM WELCOME ===== */
         .hero {
-            padding: 130px 0 70px;
+            padding: 136px 0 40px;
             background: linear-gradient(170deg, var(--warm-white) 0%, var(--cream) 40%, var(--green-pale) 100%);
             position: relative; overflow: hidden;
         }
@@ -275,11 +276,11 @@
         .hero-actions { display: flex; align-items: center; gap: 16px; flex-wrap: wrap; margin-bottom: 36px; }
         .btn-primary {
             display: inline-flex; align-items: center; gap: 8px; padding: 14px 28px;
-            background: var(--navy); color: white; border-radius: var(--radius);
+            background: var(--green-forest); color: white; border-radius: var(--radius);
             font-family: var(--font-body); font-weight: 600; font-size: 0.95rem;
             border: none; cursor: pointer; transition: all var(--transition);
         }
-        .btn-primary:hover { background: var(--navy-deep); color: white; transform: translateY(-2px); box-shadow: 0 6px 20px rgba(26, 60, 94, 0.2); }
+        .btn-primary:hover { background: #3D6625; color: white; transform: translateY(-2px); box-shadow: 0 6px 20px rgba(74, 122, 46, 0.25); }
         .btn-outline {
             display: inline-flex; align-items: center; gap: 8px; padding: 14px 28px;
             background: transparent; color: var(--navy); border: 2px solid var(--navy);
@@ -322,7 +323,7 @@
 
         /* ===== COMMUNITY TRUST STRIP ===== */
         .trust-strip {
-            padding: 40px 0; background: var(--warm-white); position: relative; z-index: 5;
+            padding: 24px 0; background: var(--warm-white); position: relative; z-index: 5;
         }
         .trust-strip-inner {
             display: flex; align-items: center; justify-content: center;
@@ -366,7 +367,7 @@
         .presence-callout p { font-size: 0.95rem; color: var(--text-dark); line-height: 1.65; margin: 0; }
 
         /* ===== HOW WE HELP ===== */
-        .how-we-help { background: var(--cream); }
+        .how-we-help { background: var(--green-pale); }
         .section-header { text-align: center; margin-bottom: 56px; }
         .section-header p { max-width: 620px; margin: 12px auto 0; color: var(--text-body); font-size: 1.05rem; }
         .steps-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 40px; position: relative; }
@@ -432,7 +433,7 @@
         .provider-logo:hover { color: rgba(255,255,255,0.6); }
 
         /* ===== FAQ ===== */
-        .faq { background: var(--cream); }
+        .faq { background: var(--green-pale); }
         .faq-grid { display: grid; grid-template-columns: 1fr 1.4fr; gap: 60px; align-items: start; }
         .faq-intro h2 { margin-bottom: 16px; }
         .faq-intro p { margin-bottom: 24px; font-size: 1.02rem; }
@@ -495,17 +496,17 @@
         .form-group input:focus, .form-group select:focus, .form-group textarea:focus { outline: none; border-color: var(--green-sage); }
         .form-group textarea { resize: vertical; min-height: 80px; }
         .form-submit {
-            width: 100%; padding: 14px; background: var(--navy); color: white; border: none;
+            width: 100%; padding: 14px; background: var(--green-forest); color: white; border: none;
             border-radius: var(--radius); font-family: var(--font-body); font-weight: 600;
             font-size: 0.95rem; cursor: pointer; transition: all var(--transition); margin-top: 8px;
         }
-        .form-submit:hover { background: var(--navy-deep); }
+        .form-submit:hover { background: #3D6625; }
 
         /* ===== FOOTER ===== */
         .footer { background: var(--navy-deep); color: rgba(255,255,255,0.7); padding: 64px 0 32px; }
         .footer-grid { display: grid; grid-template-columns: 1.5fr 1fr 1fr 1fr; gap: 40px; margin-bottom: 48px; }
         .footer-brand p { font-size: 0.88rem; line-height: 1.7; margin-top: 16px; max-width: 300px; }
-        .footer-logo { height: 48px; filter: brightness(0) invert(1); opacity: 0.9; }
+        .footer-logo { height: 48px; background: rgba(255,255,255,0.95); padding: 8px 12px; border-radius: var(--radius); }
         .footer-col h4 {
             color: white; font-family: var(--font-body); font-size: 0.82rem;
             font-weight: 700; letter-spacing: 0.1em; text-transform: uppercase; margin-bottom: 16px;
@@ -531,7 +532,7 @@
 
         /* ===== MOBILE MENU ===== */
         .mobile-menu {
-            display: none; position: fixed; top: 72px; left: 0; right: 0; bottom: 0;
+            display: none; position: fixed; top: 80px; left: 0; right: 0; bottom: 0;
             background: white; z-index: 999; padding: 24px; flex-direction: column; gap: 4px; overflow-y: auto;
         }
         .mobile-menu.open { display: flex; }
@@ -541,6 +542,39 @@
         /* ===== ANIMATIONS ===== */
         .fade-in { opacity: 0; transform: translateY(24px); transition: opacity 0.6s ease, transform 0.6s ease; }
         .fade-in.visible { opacity: 1; transform: translateY(0); }
+        .fade-in.delay-1 { transition-delay: 0.15s; }
+        .fade-in.delay-2 { transition-delay: 0.3s; }
+        .fade-in.delay-3 { transition-delay: 0.45s; }
+
+        /* Step number pop animation */
+        @keyframes stepPop {
+            0% { transform: scale(0.3); opacity: 0; }
+            60% { transform: scale(1.15); }
+            100% { transform: scale(1); opacity: 1; }
+        }
+        .step-card.visible .step-number {
+            animation: stepPop 0.5s ease forwards;
+        }
+        .step-card:nth-child(1).visible .step-number { animation-delay: 0.1s; }
+        .step-card:nth-child(2).visible .step-number { animation-delay: 0.3s; }
+        .step-card:nth-child(3).visible .step-number { animation-delay: 0.5s; }
+        .step-number { opacity: 0; }
+
+        /* Service card staggered entrance */
+        .service-card.fade-in:nth-child(1) { transition-delay: 0s; }
+        .service-card.fade-in:nth-child(2) { transition-delay: 0.15s; }
+        .service-card.fade-in:nth-child(3) { transition-delay: 0.3s; }
+
+        /* Trust pill entrance */
+        @keyframes slideUp {
+            from { opacity: 0; transform: translateY(12px); }
+            to { opacity: 1; transform: translateY(0); }
+        }
+        .trust-pill { opacity: 0; animation: slideUp 0.4s ease forwards; }
+        .trust-pill:nth-child(1) { animation-delay: 0.1s; }
+        .trust-pill:nth-child(2) { animation-delay: 0.2s; }
+        .trust-pill:nth-child(3) { animation-delay: 0.3s; }
+        .trust-pill:nth-child(4) { animation-delay: 0.4s; }
 
         /* ===== RESPONSIVE ===== */
         @media (max-width: 1024px) {
@@ -655,9 +689,7 @@
         </div>
     </div>
 
-    <div class="wave-divider" aria-hidden="true">
-        <svg viewBox="0 0 400 100" xmlns="http://www.w3.org/2000/svg"><path d="M0 60 C60 60 80 25 140 30 C200 35 210 70 270 65 C330 60 360 30 400 40" fill="none" stroke="#1A3C5E" stroke-width="14" stroke-linecap="round"/><path d="M20 75 C80 75 110 45 160 50 C210 55 230 80 290 75 C340 71 370 50 400 55" fill="none" stroke="#1A3C5E" stroke-width="10" stroke-linecap="round"/></svg>
-    </div>
+    <div class="section-break" aria-hidden="true"></div>
     <section class="presence" id="about">
         <div class="container">
             <div class="presence-grid">
@@ -683,9 +715,7 @@
         </div>
     </section>
 
-    <div class="wave-divider" aria-hidden="true">
-        <svg viewBox="0 0 400 100" xmlns="http://www.w3.org/2000/svg"><path d="M0 60 C60 60 80 25 140 30 C200 35 210 70 270 65 C330 60 360 30 400 40" fill="none" stroke="#1A3C5E" stroke-width="14" stroke-linecap="round"/><path d="M20 75 C80 75 110 45 160 50 C210 55 230 80 290 75 C340 71 370 50 400 55" fill="none" stroke="#1A3C5E" stroke-width="10" stroke-linecap="round"/></svg>
-    </div>
+    <div class="section-break" aria-hidden="true"></div>
 
     <!-- HOW WE HELP -->
     <section class="how-we-help" id="how">
@@ -715,9 +745,7 @@
         </div>
     </section>
 
-    <div class="wave-divider" aria-hidden="true">
-        <svg viewBox="0 0 400 100" xmlns="http://www.w3.org/2000/svg"><path d="M0 60 C60 60 80 25 140 30 C200 35 210 70 270 65 C330 60 360 30 400 40" fill="none" stroke="#1A3C5E" stroke-width="14" stroke-linecap="round"/><path d="M20 75 C80 75 110 45 160 50 C210 55 230 80 290 75 C340 71 370 50 400 55" fill="none" stroke="#1A3C5E" stroke-width="10" stroke-linecap="round"/></svg>
-    </div>
+    <div class="section-break" aria-hidden="true"></div>
 
     <!-- SERVICES -->
     <section class="services" id="services">
@@ -802,12 +830,18 @@
             <div class="faq-grid">
                 <div class="faq-intro fade-in">
                     <span class="section-label"><svg class="sprig-accent" viewBox="0 0 24 48" xmlns="http://www.w3.org/2000/svg"><path d="M12 48 V24" stroke="#4A7A2E" stroke-width="2" fill="none"/><path d="M12 24 C12 18 6 14 2 12 C6 12 12 16 12 20" fill="#7BA35A" opacity="0.7"/><path d="M12 20 C12 14 18 10 22 8 C18 8 12 12 12 16" fill="#4A7A2E" opacity="0.6"/><path d="M12 14 C12 8 6 4 3 2 C7 2 12 6 12 10" fill="#7BA35A" opacity="0.8"/></svg>Questions?</span>
-                    <h2>People Ask Us This a Lot</h2>
-                    <p>If you don't see your question here, just call. We'd rather talk it through than have you guessing.</p>
-                    <a href="tel:8286458777" class="btn-outline">
-                        <svg width="16" height="16" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path d="M22 16.92v3a2 2 0 01-2.18 2 19.79 19.79 0 01-8.63-3.07 19.5 19.5 0 01-6-6 19.79 19.79 0 01-3.07-8.67A2 2 0 014.11 2h3a2 2 0 012 1.72c.127.96.361 1.903.7 2.81a2 2 0 01-.45 2.11L8.09 9.91a16 16 0 006 6l1.27-1.27a2 2 0 012.11-.45c.907.339 1.85.573 2.81.7A2 2 0 0122 16.92z"/></svg>
-                        828-645-8777
-                    </a>
+                    <h2>Common Questions We Hear</h2>
+                    <p>If you don't see your question here, email us or schedule a time to come in — it's a busy time of year and we want to give you our full attention. You can also call and we'll get back to you the same business day.</p>
+                    <div style="display:flex; flex-direction:column; gap:10px; margin-top:20px;">
+                        <a href="mailto:info@petersoninsurance.group" class="btn-primary" style="justify-content:center;">
+                            <svg width="16" height="16" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path d="M3 8l7.89 5.26a2 2 0 002.22 0L21 8M5 19h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z"/></svg>
+                            Email Us
+                        </a>
+                        <a href="#contact" class="btn-outline" style="justify-content:center;">
+                            <svg width="16" height="16" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path d="M8 7V3m8 4V3m-9 8h10M5 21h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v12a2 2 0 002 2z"/></svg>
+                            Schedule an Appointment
+                        </a>
+                    </div>
                 </div>
                 <div class="faq-items fade-in">
                     <div class="faq-item active">
@@ -897,10 +931,6 @@
             </div>
         </div>
     </section>
-
-    <div class="wave-divider" aria-hidden="true">
-        <svg viewBox="0 0 400 100" xmlns="http://www.w3.org/2000/svg"><path d="M0 60 C60 60 80 25 140 30 C200 35 210 70 270 65 C330 60 360 30 400 40" fill="none" stroke="#1A3C5E" stroke-width="14" stroke-linecap="round"/><path d="M20 75 C80 75 110 45 160 50 C210 55 230 80 290 75 C340 71 370 50 400 55" fill="none" stroke="#1A3C5E" stroke-width="10" stroke-linecap="round"/></svg>
-    </div>
 
     <!-- FOOTER -->
     <footer class="footer">
