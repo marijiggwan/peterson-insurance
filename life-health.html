@@ -129,13 +129,16 @@
         .section-label .sprig-accent {
             width: 16px; height: auto; opacity: 0.5; flex-shrink: 0;
         }
-        .wave-divider {
+        
+        .section-break {
             display: flex; justify-content: center; align-items: center;
-            padding: 16px 0; overflow: hidden;
+            padding: 8px 0; overflow: hidden; position: relative;
         }
-        .wave-divider svg {
-            width: 200px; height: auto; opacity: 0.35;
+        .section-break::before {
+            content: ""; width: 120px; height: 2px;
+            background: linear-gradient(90deg, transparent, var(--green-sage), transparent);
         }
+        
 
         .container { max-width: 1140px; margin: 0 auto; padding: 0 24px; }
         .container-narrow { max-width: 800px; margin: 0 auto; padding: 0 24px; }
@@ -149,17 +152,17 @@
         }
         .nav-inner {
             display: flex; align-items: center; justify-content: space-between;
-            max-width: 1200px; margin: 0 auto; padding: 0 24px; height: 72px;
+            max-width: 1200px; margin: 0 auto; padding: 0 24px; height: 80px;
         }
-        .nav-logo img { height: 52px; width: auto; }
+        .nav-logo img { height: 62px; width: auto; }
         .nav-links { display: flex; align-items: center; gap: 32px; list-style: none; }
         .nav-links a { font-size: 0.9rem; font-weight: 500; color: var(--text-dark); }
         .nav-links a:hover { color: var(--navy); }
         .nav-cta {
-            padding: 10px 22px; background: var(--navy); color: white !important;
+            padding: 10px 22px; background: var(--green-forest); color: white !important;
             border-radius: var(--radius); font-weight: 600; font-size: 0.88rem; transition: all var(--transition);
         }
-        .nav-cta:hover { background: var(--navy-deep); }
+        .nav-cta:hover { background: #3D6625; }
         .nav-phone { font-weight: 600; color: var(--navy) !important; }
         .hamburger { display: none; flex-direction: column; gap: 5px; background: none; border: none; cursor: pointer; }
         .hamburger span { width: 24px; height: 2px; background: var(--navy); }
@@ -184,7 +187,7 @@
             background: var(--navy); color: white; border-radius: var(--radius);
             font-weight: 600; font-size: 0.95rem; transition: all var(--transition); border: none; cursor: pointer;
         }
-        .btn-primary:hover { background: var(--navy-deep); color: white; transform: translateY(-2px); }
+        .btn-primary:hover { background: #3D6625; color: white; transform: translateY(-2px); }
         .btn-outline {
             display: inline-flex; align-items: center; gap: 8px; padding: 14px 28px;
             background: transparent; color: var(--navy); border: 2px solid var(--navy);
@@ -301,16 +304,40 @@
         .faq-answer { max-height: 0; overflow: hidden; transition: max-height 0.4s ease; }
         .faq-answer-inner { padding: 0 24px 20px; font-size: 0.92rem; line-height: 1.7; }
 
-        /* FOOTER */
-        .footer { background: var(--navy-deep); color: rgba(255,255,255,0.7); padding: 48px 0 32px; }
-        .footer-simple {
-            display: flex; justify-content: space-between; align-items: center; font-size: 0.85rem;
+        
+        /* ===== FOOTER ===== */
+        .footer { background: var(--navy-deep); color: rgba(255,255,255,0.7); padding: 64px 0 32px; }
+        .footer-grid { display: grid; grid-template-columns: 1.5fr 1fr 1fr 1fr; gap: 40px; margin-bottom: 48px; }
+        .footer-brand p { font-size: 0.88rem; line-height: 1.7; margin-top: 16px; max-width: 300px; }
+        .footer-logo { height: 48px; background: rgba(255,255,255,0.95); padding: 8px 12px; border-radius: 6px; }
+        .footer-col h4 {
+            color: white; font-family: var(--font-body); font-size: 0.82rem;
+            font-weight: 700; letter-spacing: 0.1em; text-transform: uppercase; margin-bottom: 16px;
         }
-        .footer-simple a { color: rgba(255,255,255,0.5); }
+        .footer-col ul { list-style: none; }
+        .footer-col li { margin-bottom: 8px; }
+        .footer-col a { color: rgba(255,255,255,0.6); font-size: 0.88rem; transition: color 0.3s ease; }
+        .footer-col a:hover { color: white; }
+        .footer-social { display: flex; gap: 12px; margin-top: 20px; }
+        .footer-social a {
+            width: 36px; height: 36px; background: rgba(255,255,255,0.1);
+            border-radius: 6px; display: flex; align-items: center;
+            justify-content: center; transition: all 0.3s ease;
+        }
+        .footer-social a:hover { background: rgba(255,255,255,0.2); }
+        .footer-social svg { width: 16px; height: 16px; color: rgba(255,255,255,0.7); }
+        .footer-bottom {
+            padding-top: 32px; border-top: 1px solid rgba(255,255,255,0.1);
+            display: flex; justify-content: space-between; align-items: center; font-size: 0.82rem;
+        }
+        .footer-bottom a { color: rgba(255,255,255,0.5); }
+        .footer-areas { font-size: 0.82rem; color: rgba(255,255,255,0.4); }
+        
+        
 
         /* MOBILE */
         .mobile-menu {
-            display: none; position: fixed; top: 72px; left: 0; right: 0; bottom: 0;
+            display: none; position: fixed; top: 80px; left: 0; right: 0; bottom: 0;
             background: white; z-index: 999; padding: 24px; flex-direction: column; gap: 4px; overflow-y: auto;
         }
         .mobile-menu.open { display: flex; }
@@ -320,16 +347,19 @@
         .fade-in.visible { opacity: 1; transform: translateY(0); }
 
         @media (max-width: 1024px) {
+            .footer-grid { grid-template-columns: 1fr 1fr; }
             .coverage-header { grid-template-columns: 1fr; gap: 0; }
         }
         @media (max-width: 768px) {
+            .footer-grid { grid-template-columns: 1fr; }
+            .footer-bottom { flex-direction: column; gap: 12px; text-align: center; }
             .nav-links { display: none; }
             .hamburger { display: flex; }
             section { padding: 56px 0; }
             .page-hero { padding: 108px 0 48px; }
             .jump-nav-inner { gap: 16px; flex-wrap: wrap; }
             .type-cards { grid-template-columns: 1fr; }
-            .footer-simple { flex-direction: column; gap: 12px; text-align: center; }
+            
         }
     </style>
 </head>
@@ -370,9 +400,7 @@
         </div>
     </section>
 
-    <div class="wave-divider" aria-hidden="true">
-        <svg viewBox="0 0 400 100" xmlns="http://www.w3.org/2000/svg"><path d="M0 60 C60 60 80 25 140 30 C200 35 210 70 270 65 C330 60 360 30 400 40" fill="none" stroke="#1A3C5E" stroke-width="14" stroke-linecap="round"/><path d="M20 75 C80 75 110 45 160 50 C210 55 230 80 290 75 C340 71 370 50 400 55" fill="none" stroke="#1A3C5E" stroke-width="10" stroke-linecap="round"/></svg>
-    </div>
+    <div class="section-break" aria-hidden="true"></div>
 
     <!-- LIFE INSURANCE -->
     <section class="coverage-section" id="life">
@@ -424,9 +452,7 @@
         </div>
     </section>
 
-    <div class="wave-divider" aria-hidden="true">
-        <svg viewBox="0 0 400 100" xmlns="http://www.w3.org/2000/svg"><path d="M0 60 C60 60 80 25 140 30 C200 35 210 70 270 65 C330 60 360 30 400 40" fill="none" stroke="#1A3C5E" stroke-width="14" stroke-linecap="round"/><path d="M20 75 C80 75 110 45 160 50 C210 55 230 80 290 75 C340 71 370 50 400 55" fill="none" stroke="#1A3C5E" stroke-width="10" stroke-linecap="round"/></svg>
-    </div>
+    <div class="section-break" aria-hidden="true"></div>
 
     <!-- MEDICARE SUPPLEMENT -->
     <section class="coverage-section" id="medicare">
@@ -538,9 +564,7 @@
         </div>
     </div>
 
-    <div class="wave-divider" aria-hidden="true">
-        <svg viewBox="0 0 400 100" xmlns="http://www.w3.org/2000/svg"><path d="M0 60 C60 60 80 25 140 30 C200 35 210 70 270 65 C330 60 360 30 400 40" fill="none" stroke="#1A3C5E" stroke-width="14" stroke-linecap="round"/><path d="M20 75 C80 75 110 45 160 50 C210 55 230 80 290 75 C340 71 370 50 400 55" fill="none" stroke="#1A3C5E" stroke-width="10" stroke-linecap="round"/></svg>
-    </div>
+    <div class="section-break" aria-hidden="true"></div>
 
     <!-- FAQ -->
     <section class="faq" id="faq">
@@ -578,19 +602,46 @@
         </div>
     </section>
 
-    <div class="wave-divider" aria-hidden="true">
-        <svg viewBox="0 0 400 100" xmlns="http://www.w3.org/2000/svg"><path d="M0 60 C60 60 80 25 140 30 C200 35 210 70 270 65 C330 60 360 30 400 40" fill="none" stroke="#1A3C5E" stroke-width="14" stroke-linecap="round"/><path d="M20 75 C80 75 110 45 160 50 C210 55 230 80 290 75 C340 71 370 50 400 55" fill="none" stroke="#1A3C5E" stroke-width="10" stroke-linecap="round"/></svg>
-    </div>
+    <div class="section-break" aria-hidden="true"></div>
 
+    <!-- FOOTER -->
     <!-- FOOTER -->
     <footer class="footer">
         <div class="container">
-            <div class="footer-simple">
-                <span>&copy; 2026 Peterson Insurance Group &nbsp;|&nbsp; 20 N. Main Street, Weaverville, NC 28787 &nbsp;|&nbsp; <a href="tel:8286458777">828-645-8777</a></span>
-                <span style="color: rgba(255,255,255,0.4); font-size: 0.82rem;">Serving Weaverville, Asheville, Mars Hill, Marshall, Burnsville, Spruce Pine &amp; all of WNC</span>
+            <div class="footer-grid">
+                <div class="footer-brand">
+                    <img src="images/logo.png" alt="Peterson Insurance Group" class="footer-logo">
+                    <p>Family-owned independent insurance agency on Main Street in Weaverville, NC. Real people, real coverage. We've been here since 2001 and we're not going anywhere.</p>
+                    <div class="footer-social">
+                        <a href="https://www.facebook.com/petersoninsurancegroup" aria-label="Facebook"><svg viewBox="0 0 24 24" fill="currentColor"><path d="M24 12.073c0-6.627-5.373-12-12-12s-12 5.373-12 12c0 5.99 4.388 10.954 10.125 11.854v-8.385H7.078v-3.47h3.047V9.43c0-3.007 1.792-4.669 4.533-4.669 1.312 0 2.686.235 2.686.235v2.953H15.83c-1.491 0-1.956.925-1.956 1.874v2.25h3.328l-.532 3.47h-2.796v8.385C19.612 23.027 24 18.062 24 12.073z"/></svg></a>
+                        <a href="https://www.instagram.com/petersoninsurancegroup" aria-label="Instagram"><svg viewBox="0 0 24 24" fill="currentColor"><path d="M12 2.163c3.204 0 3.584.012 4.85.07 3.252.148 4.771 1.691 4.919 4.919.058 1.265.069 1.645.069 4.849 0 3.205-.012 3.584-.069 4.849-.149 3.225-1.664 4.771-4.919 4.919-1.266.058-1.644.07-4.85.07-3.204 0-3.584-.012-4.849-.07-3.26-.149-4.771-1.699-4.919-4.92-.058-1.265-.07-1.644-.07-4.849 0-3.204.013-3.583.07-4.849.149-3.227 1.664-4.771 4.919-4.919 1.266-.057 1.645-.069 4.849-.069zM12 0C8.741 0 8.333.014 7.053.072 2.695.272.273 2.69.073 7.052.014 8.333 0 8.741 0 12c0 3.259.014 3.668.072 4.948.2 4.358 2.618 6.78 6.98 6.98C8.333 23.986 8.741 24 12 24c3.259 0 3.668-.014 4.948-.072 4.354-.2 6.782-2.618 6.979-6.98.059-1.28.073-1.689.073-4.948 0-3.259-.014-3.667-.072-4.947-.196-4.354-2.617-6.78-6.979-6.98C15.668.014 15.259 0 12 0zm0 5.838a6.162 6.162 0 100 12.324 6.162 6.162 0 000-12.324zM12 16a4 4 0 110-8 4 4 0 010 8zm6.406-11.845a1.44 1.44 0 100 2.881 1.44 1.44 0 000-2.881z"/></svg></a>
+                        <a href="https://maps.google.com/?cid=15541924730885252910" aria-label="Google Maps"><svg viewBox="0 0 24 24" fill="currentColor"><path d="M12 2C8.13 2 5 5.13 5 9c0 5.25 7 13 7 13s7-7.75 7-13c0-3.87-3.13-7-7-7zm0 9.5c-1.38 0-2.5-1.12-2.5-2.5s1.12-2.5 2.5-2.5 2.5 1.12 2.5 2.5-1.12 2.5-2.5 2.5z"/></svg></a>
+                    </div>
+                </div>
+                <div class="footer-col"><h4>Insurance</h4><ul>
+                    <li><a href="services.html#personal">Personal Insurance</a></li>
+                    <li><a href="services.html#commercial">Business Insurance</a></li>
+                    <li><a href="services.html#life-health">Life &amp; Health</a></li>
+                    <li><a href="services.html">All Policy Types</a></li>
+                </ul></div>
+                <div class="footer-col"><h4>Company</h4><ul>
+                    <li><a href="about.html">About Us</a></li>
+                    <li><a href="about.html#team">Our Team</a></li>
+                    <li><a href="index.html#faq">FAQ</a></li>
+                    <li><a href="contact.html">Contact</a></li>
+                </ul></div>
+                <div class="footer-col"><h4>Client Resources</h4><ul>
+                    <li><a href="resources.html">Submit a Claim</a></li>
+                    <li><a href="resources.html">Request Policy Change</a></li>
+                    <li><a href="resources.html">Request Certificate</a></li>
+                    <li><a href="resources.html">Pay Your Bill</a></li>
+                </ul></div>
             </div>
-            <p style="font-size: 0.75rem; color: rgba(255,255,255,0.3); margin-top: 16px; line-height: 1.6;">Life insurance and Medicare Supplement products provided by Erie Family Life Insurance Company (home office: Erie, PA). Not available in all states. ERIE life insurance products are not available in New York. ERIE Medicare Supplement products are not available in DC or New York. Short-term health coverage arranged through partner carriers. All products subject to terms, conditions, and exclusions. Contact Peterson Insurance Group for details specific to North Carolina.</p>
-            <p style="font-size: 0.72rem; color: rgba(255,255,255,0.25); margin-top: 8px;">Photography by Ryan Theede Photography and Kara Dahlberg</p>
+            <div class="footer-bottom">
+                <span>&copy; 2026 Peterson Insurance Group. All rights reserved.</span>
+                <span class="footer-areas">Serving Weaverville, Asheville, Mars Hill, Marshall, Burnsville, Spruce Pine &amp; all of Western NC</span>
+            </div>
+            <p style="font-size: 0.72rem; color: rgba(255,255,255,0.25); margin-top: 16px;">Photography by Ryan Theede Photography and Kara Dahlberg</p>
         </div>
     </footer>
 
