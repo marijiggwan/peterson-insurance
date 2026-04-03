@@ -38,7 +38,8 @@
         "mainEntity": [
             { "@type": "Question", "name": "How does an independent agent save me money on auto insurance?", "acceptedAnswer": { "@type": "Answer", "text": "An independent agent like Peterson Insurance Group represents multiple carriers — Erie, Progressive, Travelers, Liberty Mutual, and more. Instead of getting one quote from one company, we compare options across all of them to find the best coverage at a competitive price. There's no extra cost to use an agent." }},
             { "@type": "Question", "name": "What auto insurance coverage do I need in North Carolina?", "acceptedAnswer": { "@type": "Answer", "text": "North Carolina requires liability coverage with minimum limits of 30/60/25 — that's $30,000 per person, $60,000 per accident for bodily injury, and $25,000 for property damage. You'll also need uninsured motorist coverage. We typically recommend higher limits plus collision and comprehensive, depending on your vehicle and situation." }},
-            { "@type": "Question", "name": "Does Peterson Insurance Group insure classic and collector cars?", "acceptedAnswer": { "@type": "Answer", "text": "Yes. We work with Hagerty, the nation's leading classic car insurer, for agreed-value coverage on collector vehicles, vintage cars, and classic trucks. Hagerty policies are designed specifically for vehicles that appreciate in value rather than depreciate." }}
+            { "@type": "Question", "name": "Does Peterson Insurance Group insure classic and collector cars?", "acceptedAnswer": { "@type": "Answer", "text": "Yes. We work with Hagerty, the nation's leading classic car insurer, for agreed-value coverage on collector vehicles, vintage cars, and classic trucks. Hagerty policies are designed specifically for vehicles that appreciate in value rather than depreciate." }},
+            { "@type": "Question", "name": "I just moved to North Carolina — what do I need to do about auto insurance?", "acceptedAnswer": { "@type": "Answer", "text": "North Carolina has its own minimum coverage requirements, and your out-of-state policy may not meet them. You'll need to register your vehicle in NC within 30 days and update your insurance. Peterson Insurance Group helps many people who've recently relocated to Western NC from other states." }}
         ]
     }
     </script>
@@ -107,9 +108,14 @@
             box-shadow: var(--shadow-soft); transition: box-shadow var(--transition), transform var(--transition);
             border-left: 4px solid var(--green-sage);
         }
-        .vehicle-card:hover { box-shadow: var(--shadow-card); transform: translateY(-3px); }
+        .vehicle-card:hover { 
+            box-shadow: 0 8px 32px rgba(74,122,46,0.15); 
+            transform: translateY(-5px); 
+            border-left-color: var(--green-forest);
+        }
         .vehicle-card h3 { margin-bottom: 10px; display: flex; align-items: center; gap: 10px; }
-        .vehicle-card h3 svg { width: 28px; height: 28px; color: var(--navy); flex-shrink: 0; }
+        .vehicle-card h3 svg { width: 28px; height: 28px; color: var(--navy); flex-shrink: 0; transition: color var(--transition); }
+        .vehicle-card:hover h3 svg { color: var(--green-forest); }
         .vehicle-card p { font-size: 0.93rem; margin-bottom: 12px; }
         .vehicle-card .carriers { font-size: 0.82rem; color: var(--text-light); padding-top: 12px; border-top: 1px solid var(--border-light); }
 
@@ -305,6 +311,7 @@
                     <h2>North Carolina Auto Insurance Requirements</h2>
                     <p>NC law requires all registered vehicles to carry minimum liability coverage. But the state minimums are just that — minimums. They may not be enough to protect you in a serious accident.</p>
                     <p>We always walk through your specific situation and recommend coverage levels that actually make sense for your vehicle, your assets, and your family. No upselling — just making sure you're not underinsured.</p>
+                    <p style="margin-top: 8px; color: rgba(255,255,255,0.7); font-size: 0.93rem;"><strong style="color: white;">New to North Carolina?</strong> A lot of people are relocating to the Asheville and Weaverville area. If you've recently moved from another state, your current policy may not meet NC requirements. We'll help you make the switch — it's one of the easiest parts of your move.</p>
                 </div>
                 <div class="nc-minimums fade-in">
                     <h3>NC Minimum Requirements</h3>
@@ -371,6 +378,10 @@
                     <button class="faq-question">I just bought a new car — what do I need to do?<span class="faq-toggle"><svg fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path d="M12 5v14M5 12h14"/></svg></span></button>
                     <div class="faq-answer"><div class="faq-answer-inner">Call us at 828-645-8777 before you drive it off the lot if you can — or as soon as possible after. We'll add it to your policy and make sure you have the right coverage. If you're financing, the lender will require comprehensive and collision. We can usually handle it same day.</div></div>
                 </div>
+                <div class="faq-item">
+                    <button class="faq-question">I just moved to North Carolina — what do I need to do about auto insurance?<span class="faq-toggle"><svg fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path d="M12 5v14M5 12h14"/></svg></span></button>
+                    <div class="faq-answer"><div class="faq-answer-inner">Welcome to WNC! North Carolina has its own minimum coverage requirements, and your out-of-state policy may not meet them. You'll need to register your vehicle in NC within 30 days and update your insurance. We help a lot of people who've recently relocated — from Florida, New York, Texas, you name it. We'll review what you had, explain what NC requires, and shop across our carriers to find you a policy that fits your new situation. It's one of the easiest parts of your move — we handle it all.</div></div>
+                </div>
             </div>
         </div>
     </section>
@@ -383,7 +394,7 @@
             <h2>Let Us Shop Your Auto Insurance</h2>
             <p>Tell us what you drive and we'll compare quotes across multiple carriers. No obligation, no pressure — just better options.</p>
             <div style="display: flex; gap: 16px; justify-content: center; flex-wrap: wrap;">
-                <a href="index.html#contact" class="btn-primary">Get a Vehicle Quote <svg width="16" height="16" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path d="M5 12h14M12 5l7 7-7 7"/></svg></a>
+                <a href="index.html#contact" class="btn-primary" style="background: var(--green-forest);">Get a Vehicle Quote <svg width="16" height="16" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"/><polyline points="22,6 12,13 2,6"/></svg></a>
                 <a href="tel:8286458777" class="btn-outline"><svg width="16" height="16" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path d="M22 16.92v3a2 2 0 01-2.18 2 19.79 19.79 0 01-8.63-3.07 19.5 19.5 0 01-6-6 19.79 19.79 0 01-3.07-8.67A2 2 0 014.11 2h3a2 2 0 012 1.72c.127.96.361 1.903.7 2.81a2 2 0 01-.45 2.11L8.09 9.91a16 16 0 006 6l1.27-1.27a2 2 0 012.11-.45c.907.339 1.85.573 2.81.7A2 2 0 0122 16.92z"/></svg> 828-645-8777</a>
             </div>
         </div>
@@ -403,9 +414,10 @@
                     </div>
                 </div>
                 <div class="footer-col"><h4>Insurance</h4><ul>
-                    <li><a href="services.html#personal">Personal Insurance</a></li>
-                    <li><a href="services.html#commercial">Business Insurance</a></li>
-                    <li><a href="services.html#life-health">Life &amp; Health</a></li>
+                    <li><a href="auto-vehicle.html">Auto &amp; Vehicle</a></li>
+                    <li><a href="home-property.html">Home &amp; Property</a></li>
+                    <li><a href="business.html">Business Insurance</a></li>
+                    <li><a href="life-health.html">Life &amp; Health</a></li>
                     <li><a href="services.html">All Policy Types</a></li>
                 </ul></div>
                 <div class="footer-col"><h4>Company</h4><ul>

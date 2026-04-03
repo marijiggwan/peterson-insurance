@@ -112,7 +112,7 @@
         .page-hero .lead { font-size: 1.1rem; color: var(--text-dark); line-height: 1.7; }
         .hero-split { display: grid; grid-template-columns: 1fr 1fr; gap: 48px; align-items: center; }
         .hero-image { border-radius: var(--radius-lg); overflow: hidden; box-shadow: var(--shadow-card); }
-        .hero-image img { width: 100%; display: block; }
+        .hero-image img { width: 100%; display: block; object-fit: cover; object-position: center; }
 
         /* COVERAGE CARDS */
         .coverage-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); gap: 28px; margin-top: 40px; }
@@ -121,9 +121,14 @@
             box-shadow: var(--shadow-soft); border-top: 3px solid var(--green-sage);
             transition: box-shadow var(--transition), transform var(--transition);
         }
-        .coverage-card:hover { box-shadow: var(--shadow-card); transform: translateY(-3px); }
-        .coverage-card .card-icon { width: 48px; height: 48px; background: var(--green-pale); border-radius: 50%; display: flex; align-items: center; justify-content: center; margin-bottom: 16px; }
-        .coverage-card .card-icon svg { width: 24px; height: 24px; color: var(--green-forest); }
+        .coverage-card:hover { 
+            box-shadow: 0 8px 32px rgba(74,122,46,0.15); 
+            transform: translateY(-5px);
+        }
+        .coverage-card:hover .card-icon { background: var(--green-forest); }
+        .coverage-card:hover .card-icon svg { color: white; }
+        .coverage-card .card-icon { width: 48px; height: 48px; background: var(--green-pale); border-radius: 50%; display: flex; align-items: center; justify-content: center; margin-bottom: 16px; transition: background var(--transition); }
+        .coverage-card .card-icon svg { width: 24px; height: 24px; color: var(--green-forest); transition: color var(--transition); }
         .coverage-card h3 { margin-bottom: 10px; }
         .coverage-card p { font-size: 0.95rem; margin-bottom: 12px; }
         .coverage-card .detail { display: flex; align-items: flex-start; gap: 8px; margin-bottom: 6px; font-size: 0.9rem; }
@@ -261,8 +266,8 @@
                     <h1>Protect Your Business <br>Without the Complexity</h1>
                     <p class="lead">Whether you're a one-person operation on Main Street or managing a crew across Western NC, we build commercial coverage that actually fits your business — not a template from a website. We sit down with you, understand what you do, and put together a policy that makes sense.</p>
                 </div>
-                <div class="hero-image">
-                    <img src="images/main-street-mural.jpg" alt="Welcome to Main Street mural in downtown Weaverville, NC" loading="eager">
+                <div class="hero-image" style="display: flex; align-items: center; background: var(--cream);">
+                    <img src="images/main-street-mural.jpg" alt="Welcome to Main Street mural in downtown Weaverville, NC" loading="eager" style="object-fit: contain; max-height: 340px; margin: 0 auto;">
                 </div>
             </div>
         </div>
@@ -446,9 +451,10 @@
                     </div>
                 </div>
                 <div class="footer-col"><h4>Insurance</h4><ul>
-                    <li><a href="services.html#personal">Personal Insurance</a></li>
-                    <li><a href="services.html#commercial">Business Insurance</a></li>
-                    <li><a href="services.html#life-health">Life &amp; Health</a></li>
+                    <li><a href="auto-vehicle.html">Auto &amp; Vehicle</a></li>
+                    <li><a href="home-property.html">Home &amp; Property</a></li>
+                    <li><a href="business.html">Business Insurance</a></li>
+                    <li><a href="life-health.html">Life &amp; Health</a></li>
                     <li><a href="services.html">All Policy Types</a></li>
                 </ul></div>
                 <div class="footer-col"><h4>Company</h4><ul>

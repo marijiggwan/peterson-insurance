@@ -32,7 +32,10 @@
         "mainEntity": [
             { "@type": "Question", "name": "Do I need flood insurance in Western North Carolina?", "acceptedAnswer": { "@type": "Answer", "text": "Standard homeowners insurance does not cover flood damage. After Hurricane Helene, many WNC homeowners discovered this the hard way. Even if you're not in a designated flood zone, flood insurance is worth considering — especially near creeks, rivers, or low-lying areas. Peterson Insurance Group can help you evaluate your flood risk and find coverage." }},
             { "@type": "Question", "name": "Can Peterson Insurance Group insure mobile homes and tiny homes?", "acceptedAnswer": { "@type": "Answer", "text": "Yes. We work with carriers like Foremost and Piedmont Mutual that specialize in manufactured homes, mobile homes, and tiny homes. Coverage includes the structure, personal property, liability, and additional living expenses if your home becomes uninhabitable." }},
-            { "@type": "Question", "name": "What should I know about homeowners insurance after Hurricane Helene?", "acceptedAnswer": { "@type": "Answer", "text": "Hurricane Helene highlighted gaps many homeowners didn't know they had — especially around flood coverage, roof condition requirements, and replacement cost versus actual cash value. Peterson Insurance Group helped clients through the entire claims process and can review your current policy to make sure you're properly covered going forward." }}
+            { "@type": "Question", "name": "What should I know about homeowners insurance after Hurricane Helene?", "acceptedAnswer": { "@type": "Answer", "text": "Hurricane Helene highlighted gaps many homeowners didn't know they had — especially around flood coverage, roof condition requirements, and replacement cost versus actual cash value. Peterson Insurance Group helped clients through the entire claims process and can review your current policy to make sure you're properly covered going forward." }},
+            { "@type": "Question", "name": "Do I need special insurance for my Airbnb or short-term rental?", "acceptedAnswer": { "@type": "Answer", "text": "Yes. A standard homeowners policy typically doesn't cover short-term rental activity. If a guest gets injured or causes damage, you may not be covered. Peterson Insurance Group can set you up with a policy designed for short-term rental properties in Western NC." }},
+            { "@type": "Question", "name": "I just moved to North Carolina and bought a home — what do I need to know about insurance?", "acceptedAnswer": { "@type": "Answer", "text": "North Carolina has specific homeowners insurance considerations including wind/hail deductibles, flood risk along creeks and rivers, and post-Hurricane Helene changes in how carriers evaluate mountain properties. Peterson Insurance Group helps many relocating homeowners find the right coverage." }},
+            { "@type": "Question", "name": "Can you insure a second home or vacation property in the mountains?", "acceptedAnswer": { "@type": "Answer", "text": "Yes. Whether it's a cabin, a second home near Asheville, or a seasonal lake house, Peterson Insurance Group can find coverage for second homes and vacation properties with the right carrier." }}
         ]
     }
     </script>
@@ -91,15 +94,22 @@
         .page-hero { padding: 140px 0 60px; background: linear-gradient(135deg, var(--green-pale) 0%, var(--cream) 50%, var(--warm-white) 100%); }
         .page-hero h1 { margin-bottom: 16px; }
         .page-hero .lead { font-size: 1.1rem; color: var(--text-dark); line-height: 1.7; max-width: 720px; }
+        .hero-split { display: grid; grid-template-columns: 1fr 1fr; gap: 48px; align-items: center; }
+        .hero-image { border-radius: var(--radius-lg); overflow: hidden; box-shadow: var(--shadow-card); }
+        .hero-image img { width: 100%; display: block; }
 
         /* PROPERTY CARDS */
         .property-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 24px; margin-top: 40px; }
         .property-card {
             background: white; border-radius: var(--radius-lg); padding: 28px;
             box-shadow: var(--shadow-soft); border-top: 3px solid var(--green-sage);
-            transition: box-shadow var(--transition), transform var(--transition);
+            transition: box-shadow var(--transition), transform var(--transition), border-color var(--transition);
         }
-        .property-card:hover { box-shadow: var(--shadow-card); transform: translateY(-3px); }
+        .property-card:hover { 
+            box-shadow: 0 8px 32px rgba(74,122,46,0.15); 
+            transform: translateY(-5px); 
+            border-top-color: var(--green-forest);
+        }
         .property-card h3 { margin-bottom: 10px; }
         .property-card p { font-size: 0.93rem; margin-bottom: 12px; }
         .property-card .carriers { font-size: 0.82rem; color: var(--text-light); padding-top: 12px; border-top: 1px solid var(--border-light); }
@@ -200,6 +210,8 @@
             .property-grid { grid-template-columns: 1fr; }
             .helene-grid { grid-template-columns: 1fr; }
             .flood-grid { grid-template-columns: 1fr; }
+            .hero-split { grid-template-columns: 1fr; }
+            .hero-image { order: -1; }
             .nav-links { display: none; } .hamburger { display: block; }
             
         }
@@ -222,10 +234,17 @@
 
     <!-- PAGE HERO -->
     <section class="page-hero">
-        <div class="container fade-in">
-            <span class="section-label"><svg class="sprig" viewBox="0 0 24 48" xmlns="http://www.w3.org/2000/svg"><path d="M12 48 V24" stroke="#4A7A2E" stroke-width="2" fill="none"/><path d="M12 24 C12 18 6 14 2 12 C6 12 12 16 12 20" fill="#7BA35A" opacity="0.7"/><path d="M12 20 C12 14 18 10 22 8 C18 8 12 12 12 16" fill="#4A7A2E" opacity="0.6"/><path d="M12 14 C12 8 6 4 3 2 C7 2 12 6 12 10" fill="#7BA35A" opacity="0.8"/></svg>Home &amp; Property Insurance</span>
-            <h1>Your Home Deserves <br>More Than a Template Policy</h1>
-            <p class="lead">Whether you own a house on Main Street, rent an apartment in Asheville, or have a cabin in the mountains — we shop across multiple carriers to find coverage that fits your property, your situation, and your budget. No cookie-cutter policies.</p>
+        <div class="container">
+            <div class="hero-split fade-in">
+                <div>
+                    <span class="section-label"><svg class="sprig" viewBox="0 0 24 48" xmlns="http://www.w3.org/2000/svg"><path d="M12 48 V24" stroke="#4A7A2E" stroke-width="2" fill="none"/><path d="M12 24 C12 18 6 14 2 12 C6 12 12 16 12 20" fill="#7BA35A" opacity="0.7"/><path d="M12 20 C12 14 18 10 22 8 C18 8 12 12 12 16" fill="#4A7A2E" opacity="0.6"/><path d="M12 14 C12 8 6 4 3 2 C7 2 12 6 12 10" fill="#7BA35A" opacity="0.8"/></svg>Home &amp; Property Insurance</span>
+                    <h1>Your Home Deserves <br>More Than a Template Policy</h1>
+                    <p class="lead">Whether you own a house on Main Street, rent an apartment in Asheville, or have a cabin in the mountains — we shop across multiple carriers to find coverage that fits your property, your situation, and your budget. No cookie-cutter policies.</p>
+                </div>
+                <div class="hero-image">
+                    <img src="images/home-interior.jpg" alt="Beautiful mountain home interior in Western North Carolina with open kitchen and mountain views" loading="eager">
+                </div>
+            </div>
         </div>
     </section>
 
@@ -366,6 +385,18 @@
                     <button class="faq-question">My roof is older — will that affect my homeowners insurance?<span class="faq-toggle"><svg fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path d="M12 5v14M5 12h14"/></svg></span></button>
                     <div class="faq-answer"><div class="faq-answer-inner">It can. Some carriers limit coverage or require an inspection for roofs over a certain age. Post-Helene, carriers have become more cautious about roof condition in WNC. If your roof is older, we'll be upfront about which carriers will work with you and what coverage is available. No surprises.</div></div>
                 </div>
+                <div class="faq-item">
+                    <button class="faq-question">I use my property as a short-term rental or Airbnb — do I need special insurance?<span class="faq-toggle"><svg fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path d="M12 5v14M5 12h14"/></svg></span></button>
+                    <div class="faq-answer"><div class="faq-answer-inner">Yes — and this is important. A standard homeowners policy typically doesn't cover short-term rental activity. If a guest gets injured or causes damage while renting your property through Airbnb, VRBO, or any other platform, you may not be covered. We can set you up with a policy designed for short-term rental properties — covering the structure, liability, lost rental income, and guest-related risks. Western NC is a huge vacation rental market, and we help a lot of property owners get this right.</div></div>
+                </div>
+                <div class="faq-item">
+                    <button class="faq-question">I just moved to North Carolina and bought a home — what do I need to know?<span class="faq-toggle"><svg fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path d="M12 5v14M5 12h14"/></svg></span></button>
+                    <div class="faq-answer"><div class="faq-answer-inner">Welcome to WNC! A lot of people are relocating here from other states, and homeowners insurance can vary significantly from what you're used to. North Carolina has specific considerations — wind/hail deductibles, flood risk along creeks and rivers, and post-Helene changes in how carriers evaluate mountain properties. We'll walk you through what's different here and find you the right coverage for your new home. If you still own property in another state, we can often help with that too.</div></div>
+                </div>
+                <div class="faq-item">
+                    <button class="faq-question">Can you insure a second home or vacation property in the mountains?<span class="faq-toggle"><svg fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path d="M12 5v14M5 12h14"/></svg></span></button>
+                    <div class="faq-answer"><div class="faq-answer-inner">Absolutely. Whether it's a cabin in the mountains, a second home near Asheville, or a lake house you use seasonally — we can find coverage for it. Second homes and vacation properties have different insurance needs than primary residences, and not every carrier writes them. We'll match your property with the right carrier and make sure you're covered year-round, even when you're not there.</div></div>
+                </div>
             </div>
         </div>
     </section>
@@ -398,9 +429,10 @@
                     </div>
                 </div>
                 <div class="footer-col"><h4>Insurance</h4><ul>
-                    <li><a href="services.html#personal">Personal Insurance</a></li>
-                    <li><a href="services.html#commercial">Business Insurance</a></li>
-                    <li><a href="services.html#life-health">Life &amp; Health</a></li>
+                    <li><a href="auto-vehicle.html">Auto &amp; Vehicle</a></li>
+                    <li><a href="home-property.html">Home &amp; Property</a></li>
+                    <li><a href="business.html">Business Insurance</a></li>
+                    <li><a href="life-health.html">Life &amp; Health</a></li>
                     <li><a href="services.html">All Policy Types</a></li>
                 </ul></div>
                 <div class="footer-col"><h4>Company</h4><ul>
