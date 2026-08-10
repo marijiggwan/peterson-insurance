@@ -234,6 +234,7 @@
             .hamburger { display: block; }
             
         }
+            .nonprofit-card:hover { box-shadow: 0 8px 32px rgba(74,122,46,0.18); transform: translateY(-4px); }
     </style>
 </head>
 <body>
@@ -273,6 +274,9 @@
                     <h1>Our Weaverville <br>Community</h1>
                     <p class="lead">Our Weaverville community is brimming with stunning beauty, exciting events, and talented artists and musicians. At Peterson Insurance Group, we prioritize supporting our local businesses, community gatherings, and dedicated nonprofits addressing the needs of those less fortunate.</p>
                 </div>
+                <div class="fade-in" style="border-radius: var(--radius-lg); overflow: hidden; box-shadow: var(--shadow-card);">
+                    <img src="images/weaverville-welcome.jpg" alt="Welcome to Weaverville sign and historic town clock on Main Street, Weaverville NC" loading="eager">
+                </div>
             </div>
         </div>
     </section>
@@ -286,11 +290,14 @@
                 <span class="section-label" style="justify-content: center;"><svg class="sprig-accent" viewBox="0 0 24 48" xmlns="http://www.w3.org/2000/svg"><path d="M12 48 V24" stroke="#4A7A2E" stroke-width="2" fill="none"/><path d="M12 24 C12 18 6 14 2 12 C6 12 12 16 12 20" fill="#7BA35A" opacity="0.7"/><path d="M12 20 C12 14 18 10 22 8 C18 8 12 12 12 16" fill="#4A7A2E" opacity="0.6"/><path d="M12 14 C12 8 6 4 3 2 C7 2 12 6 12 10" fill="#7BA35A" opacity="0.8"/></svg>Weaverville 2026 Events</span>
                 <h2>Art in Autumn — September 19, 2026</h2>
             </div>
+            <div class="fade-in" style="max-width: 760px; margin: 0 auto 24px; border-radius: var(--radius-lg); overflow: hidden; box-shadow: var(--shadow-card);">
+                <img src="images/weaverville-main-street.jpg" alt="Main Street in downtown Weaverville NC, home of the annual Art in Autumn festival" loading="lazy">
+            </div>
             <div class="fade-in" style="max-width: 760px; margin: 0 auto; background: var(--green-pale); border-radius: var(--radius); padding: 32px 36px;">
                 <p style="margin-bottom: 16px;"><strong>Saturday, September 19, 2026 &middot; 10am – 6pm &middot; Main Street, Downtown Weaverville</strong></p>
                 <p style="margin-bottom: 16px;">2026 is the 19th annual Art in Autumn Outdoor Arts and Crafts Festival. This much-loved event is held on Main Street in downtown Weaverville, North Carolina — in Buncombe County, just 7 miles from downtown Asheville.</p>
                 <p style="margin-bottom: 16px;">The event features over 100 juried artists and craftspeople, plus live music performed by beloved local artists. Each year, a guest judge from the local art scene awards $1,000 for Best of Show, $500 for second place, $250 for third, and four $50 honorable mentions.</p>
-                <p style="margin: 0;"><a href="https://www.visitweaverville.com" target="_blank" rel="noopener">Learn more at Visit Weaverville &rarr;</a></p>
+                <p style="margin: 0;"><a href="https://visitweaverville.com/events/art-in-autumn/" target="_blank" rel="noopener"><strong>Learn more about Art in Autumn &rarr;</strong></a></p>
             </div>
         </div>
     </section>
@@ -306,34 +313,48 @@
                 <p style="max-width: 680px; margin: 12px auto 0;">We are committed to strengthening our community by actively supporting local nonprofits that tirelessly address the needs of our town's most vulnerable residents. Our office is an official drop-off location for pantry goods and other donated items.</p>
             </div>
             <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); gap: 24px;">
-                <div class="fade-in" style="background: white; border-radius: var(--radius); padding: 28px;">
+                <a href="https://mannafoodbank.org/" target="_blank" rel="noopener" class="fade-in nonprofit-card" style="background: white; border-radius: var(--radius); padding: 28px; display: block; color: inherit; transition: box-shadow 0.3s ease, transform 0.3s ease;">
+                    <div style="height: 64px; display: flex; align-items: center; margin-bottom: 16px;"><img src="images/logos/manna.svg" alt="MANNA FoodBank logo" style="max-height: 64px; max-width: 220px; width: auto; height: auto; display: block;" loading="lazy"></div>
                     <h3 style="margin-bottom: 8px;">MANNA FoodBank</h3>
-                    <p style="font-size: 0.95rem; margin: 0;">MANNA FoodBank's mission is to involve, educate, and unite people in the work of ending hunger in Western North Carolina. #AshevilleStrong</p>
-                </div>
-                <div class="fade-in" style="background: white; border-radius: var(--radius); padding: 28px;">
-                    <h3 style="margin-bottom: 8px;">The Christian Ministry</h3>
-                    <p style="font-size: 0.95rem; margin: 0;">A family of Christian congregations organized to provide individuals an opportunity to grow, mature, and express their faith through fellowship and service. #WeavervilleStrong</p>
-                </div>
-                <div class="fade-in" style="background: white; border-radius: var(--radius); padding: 28px;">
+                    <p style="font-size: 0.95rem; margin: 0 0 10px;">MANNA FoodBank's mission is to involve, educate, and unite people in the work of ending hunger in Western North Carolina. #AshevilleStrong</p>
+                    <span style="color: var(--green-forest); font-weight: 600; font-size: 0.9rem;">Visit their website &rarr;</span>
+                </a>
+                <a href="https://www.abccm.org/" target="_blank" rel="noopener" class="fade-in nonprofit-card" style="background: white; border-radius: var(--radius); padding: 28px; display: block; color: inherit; transition: box-shadow 0.3s ease, transform 0.3s ease;">
+                    <div style="height: 64px; display: flex; align-items: center; margin-bottom: 16px;"><img src="images/logos/abccm.png" alt="Asheville Buncombe Community Christian Ministry logo" style="max-height: 64px; max-width: 220px; width: auto; height: auto; display: block;" loading="lazy"></div>
+                    <h3 style="margin-bottom: 8px;">Asheville Buncombe Community Christian Ministry</h3>
+                    <p style="font-size: 0.95rem; margin: 0 0 10px;">A family of Christian congregations organized to provide individuals an opportunity to grow, mature, and express their faith through fellowship and service. #WeavervilleStrong</p>
+                    <span style="color: var(--green-forest); font-weight: 600; font-size: 0.9rem;">Visit their website &rarr;</span>
+                </a>
+                <a href="https://www.ashevillegreenworks.org/" target="_blank" rel="noopener" class="fade-in nonprofit-card" style="background: white; border-radius: var(--radius); padding: 28px; display: block; color: inherit; transition: box-shadow 0.3s ease, transform 0.3s ease;">
+                    <div style="height: 64px; display: flex; align-items: center; margin-bottom: 16px;"><img src="images/logos/greenworks.png" alt="Asheville GreenWorks logo" style="max-height: 64px; max-width: 220px; width: auto; height: auto; display: block;" loading="lazy"></div>
                     <h3 style="margin-bottom: 8px;">Asheville GreenWorks</h3>
-                    <p style="font-size: 0.95rem; margin: 0;">Asheville GreenWorks inspires and mobilizes communities to build a climate-resilient future through volunteer-led urban forestry, waste reduction, and environmental education. #WNCStrong</p>
-                </div>
-                <div class="fade-in" style="background: white; border-radius: var(--radius); padding: 28px;">
+                    <p style="font-size: 0.95rem; margin: 0 0 10px;">Asheville GreenWorks inspires and mobilizes communities to build a climate-resilient future through volunteer-led urban forestry, waste reduction, and environmental education. #WNCStrong</p>
+                    <span style="color: var(--green-forest); font-weight: 600; font-size: 0.9rem;">Visit their website &rarr;</span>
+                </a>
+                <a href="https://www.samaritanspurse.org/" target="_blank" rel="noopener" class="fade-in nonprofit-card" style="background: white; border-radius: var(--radius); padding: 28px; display: block; color: inherit; transition: box-shadow 0.3s ease, transform 0.3s ease;">
+                    <div style="height: 64px; display: flex; align-items: center; margin-bottom: 16px;"><img src="images/logos/samaritans.svg" alt="Samaritan's Purse logo" style="max-height: 64px; max-width: 220px; width: auto; height: auto; display: block;" loading="lazy"></div>
                     <h3 style="margin-bottom: 8px;">Samaritan's Purse</h3>
-                    <p style="font-size: 0.95rem; margin: 0;">A nondenominational Christian nonprofit based in Boone, NC, providing disaster relief, medical care, and children's programs like Operation Christmas Child. #SamaritansPurse</p>
-                </div>
-                <div class="fade-in" style="background: white; border-radius: var(--radius); padding: 28px;">
+                    <p style="font-size: 0.95rem; margin: 0 0 10px;">A nondenominational Christian nonprofit based in Boone, NC, providing disaster relief, medical care, and children's programs like Operation Christmas Child. #SamaritansPurse</p>
+                    <span style="color: var(--green-forest); font-weight: 600; font-size: 0.9rem;">Visit their website &rarr;</span>
+                </a>
+                <a href="https://www.belovedasheville.com/" target="_blank" rel="noopener" class="fade-in nonprofit-card" style="background: white; border-radius: var(--radius); padding: 28px; display: block; color: inherit; transition: box-shadow 0.3s ease, transform 0.3s ease;">
+                    <div style="height: 64px; display: flex; align-items: center; margin-bottom: 16px;"><img src="images/logos/beloved.png" alt="BeLoved Asheville logo" style="max-height: 64px; max-width: 220px; width: auto; height: auto; display: block;" loading="lazy"></div>
                     <h3 style="margin-bottom: 8px;">BeLoved Asheville</h3>
-                    <p style="font-size: 0.95rem; margin: 0;">A grassroots nonprofit fostering a just and equitable community — tackling housing, health, and equity challenges through affordable homes, street outreach, and disaster relief. #BelovedAVL</p>
-                </div>
-                <div class="fade-in" style="background: white; border-radius: var(--radius); padding: 28px;">
+                    <p style="font-size: 0.95rem; margin: 0 0 10px;">A grassroots nonprofit fostering a just and equitable community — tackling housing, health, and equity challenges through affordable homes, street outreach, and disaster relief. #BelovedAVL</p>
+                    <span style="color: var(--green-forest); font-weight: 600; font-size: 0.9rem;">Visit their website &rarr;</span>
+                </a>
+                <a href="https://foundation.buncombeschools.org/" target="_blank" rel="noopener" class="fade-in nonprofit-card" style="background: white; border-radius: var(--radius); padding: 28px; display: block; color: inherit; transition: box-shadow 0.3s ease, transform 0.3s ease;">
+                    <div style="height: 64px; display: flex; align-items: center; margin-bottom: 16px;"><img src="images/logos/bcsf.png" alt="Buncombe County Schools Foundation logo" style="max-height: 64px; max-width: 220px; width: auto; height: auto; display: block;" loading="lazy"></div>
                     <h3 style="margin-bottom: 8px;">Buncombe County Schools Foundation</h3>
-                    <p style="font-size: 0.95rem; margin: 0;">Founded in 1984, the Foundation raises funds for innovative programs, scholarships, and teacher grants across Buncombe County Schools. #SupportOurStudents</p>
-                </div>
-                <div class="fade-in" style="background: white; border-radius: var(--radius); padding: 28px;">
+                    <p style="font-size: 0.95rem; margin: 0 0 10px;">Founded in 1984, the Foundation raises funds for innovative programs, scholarships, and teacher grants across Buncombe County Schools. #SupportOurStudents</p>
+                    <span style="color: var(--green-forest); font-weight: 600; font-size: 0.9rem;">Visit their website &rarr;</span>
+                </a>
+                <a href="https://www.ashevillehumane.org/" target="_blank" rel="noopener" class="fade-in nonprofit-card" style="background: white; border-radius: var(--radius); padding: 28px; display: block; color: inherit; transition: box-shadow 0.3s ease, transform 0.3s ease;">
+                    <div style="height: 64px; display: flex; align-items: center; margin-bottom: 16px;"><img src="images/logos/humane.svg" alt="Asheville Humane Society logo" style="max-height: 64px; max-width: 220px; width: auto; height: auto; display: block;" loading="lazy"></div>
                     <h3 style="margin-bottom: 8px;">Asheville Humane Society</h3>
-                    <p style="font-size: 0.95rem; margin: 0;">Working to find loving homes for animals and keep pets with their families through adoption, fostering, spay/neuter services, and pet retention support. #FureverFriendsAVL</p>
-                </div>
+                    <p style="font-size: 0.95rem; margin: 0 0 10px;">Working to find loving homes for animals and keep pets with their families through adoption, fostering, spay/neuter services, and pet retention support. #FureverFriendsAVL</p>
+                    <span style="color: var(--green-forest); font-weight: 600; font-size: 0.9rem;">Visit their website &rarr;</span>
+                </a>
             </div>
         </div>
     </section>
