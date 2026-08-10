@@ -1,0 +1,77 @@
+# Peterson Insurance Group — Wix → Netlify 301 redirect map
+# Drop this file (named exactly "_redirects", no extension) in the repo root.
+# Generated Aug 10, 2026 from live Wix sitemaps. Order matters: specific rules first, catch-alls last.
+
+# ---- Main pages ----
+# (/, /about, /contact keep the same paths — no redirect needed)
+/insurance                          /services                 301
+/insurance-providers                /services                 301
+/why-choose-peterson-insurance-group /about                   301
+/peterson-insurance-group-agents    /about#team               301
+/client-resources                   /resources                301
+/submitaclaim                       /submit-claim             301
+/requestpolicychange                /request-policy-change    301
+/requestcertificate                 /request-certificate      301
+/requestidcard                      /request-id-cards         301
+
+# ---- Privacy policy: built at /privacy-policy (same URL as Wix) — no redirect needed ----
+
+# ---- Blog posts → most relevant policy page (avoids soft-404 signals) ----
+# Business
+/post/restaurant-insurance-are-you-protected                                    /business      301
+/post/understanding-the-ins-and-outs-of-insurance-for-small-businesses-part-1   /business      301
+/post/2022-quick-guide-to-business-insurance                                    /business      301
+/post/breweries-need-insurance-too                                              /business      301
+/post/continuing-education-in-real-estate                                       /business      301
+
+# Life & Health
+/post/the-family-safety-net-life-insurance                                      /life-health   301
+/post/essential-guide-to-life-insurance-for-asheville-nc-families-and-businesses /life-health  301
+/post/it-s-never-too-early-to-sign-up-for-life-insurance-coverage               /life-health   301
+
+# Auto & Vehicle
+/post/teaching-teens-the-benefits-of-attentive-driving-and-how-to-get-the-best-summer-car-insurance-quote /auto-vehicle 301
+/post/driver-preparedness-roadtrips-and-pets                                    /auto-vehicle  301
+/post/mountain-driving-how-to-drive-in-extreme-conditions-safely-this-fall-and-winter-in-wnc /auto-vehicle 301
+/post/understanding-insurance-coverage-for-motorized-vehicles                   /auto-vehicle  301
+/post/tips-for-parents-with-teen-drivers                                        /auto-vehicle  301
+
+# Home & Property
+/post/the-benefits-of-having-a-home-improvement-insurance-policy-and-how-to-get-the-best-coverage /home-property 301
+/post/new-residents-smart-checklist                                             /home-property 301
+/post/fire-safety-tips-for-home-and-business                                    /home-property 301
+/post/why-do-you-need-renter-s-insurance-it-s-your-place-your-stuff             /home-property 301
+/post/how-to-prepare-your-home-before-vacation                                  /home-property 301
+/post/what-you-need-to-know-about-vacation-rentals-and-insurance                /home-property 301
+/post/the-importance-of-annual-chimney-cleaning-why-you-should-have-your-chimney-cleaned-every-year /home-property 301
+/post/navigate-home-insurance-options-add-ons-and-questions-to-ask-your-agent   /home-property 301
+/post/the-importance-of-understanding-outdoor-cooking-and-kitchen-appliance-hazards-during-the-holidays /home-property 301
+/post/the-importance-of-winterizing-your-home-protecting-your-outdoor-plumbing  /home-property 301
+/post/protecting-your-home-and-family-during-the-holidays-a-guide-to-fire-safety-and-home-insurance /home-property 301
+
+# About / company story
+/post/a-new-image-peterson-progression                                          /about         301
+/post/peterson-insurance-celebrates-20-years-as-a-family-business               /about         301
+/post/what-makes-us-independent-3-characteristics-of-peterson-insurance-group-feb /about       301
+
+# Community (DEPENDENCY: /community page must ship in Round 3 — see notes)
+/post/a-heartwarming-coat-blanket-drive-for-abccm-north                         /community     301
+/post/tis-the-season-for-hope-with-abccm                                        /community     301
+/post/two-ways-to-support-our-educators-and-students-this-summer                /community     301
+/post/the-importance-of-being-a-blood-donor-how-every-contribution-can-save-lives /community   301
+/post/donate-to-manna-get-lunch-on-us                                           /community     301
+/post/thank-you-weaverville-for-your-generosity                                 /community     301
+/post/join-us-october-10-15-2022-food-drive-for-manna-food-bank                 /community     301
+/post/help-us-give-big-support-big-ivy-community-center-pantry-supply-drive     /community     301
+
+# ---- Blog categories ----
+/blog/categories/peterson-insurance-group   /about         301
+/blog/categories/insurance-tips             /services      301
+/blog/categories/life-insurance             /life-health   301
+/blog/categories/holidays                   /community     301
+/blog/categories/community-support          /community     301
+/blog/categories/insurance-for-businesses   /business      301
+
+# ---- Catch-alls (must stay last) ----
+/blog/*   /   301
+/post/*   /   301
