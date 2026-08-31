@@ -246,6 +246,20 @@
         .hamburger { display: none; flex-direction: column; gap: 5px; background: none; border: none; cursor: pointer; padding: 4px; }
         .hamburger span { width: 24px; height: 2px; background: var(--navy); transition: all var(--transition); }
 
+        /* ===== ANNOUNCEMENT BANNER (MANNA drive — remove after drive ends) ===== */
+        .drive-banner { background: var(--navy-deep); }
+        .drive-banner-inner {
+            max-width: 1200px; margin: 0 auto; padding: 10px 24px;
+            display: flex; align-items: center; justify-content: center; gap: 10px;
+            flex-wrap: wrap; text-align: center;
+            color: rgba(255,255,255,0.92); font-size: 0.88rem; line-height: 1.4;
+        }
+        .drive-banner-inner strong { color: white; }
+        .drive-banner-inner a { color: var(--green-sage); font-weight: 700; white-space: nowrap; }
+        .drive-banner-inner a:hover { color: white; }
+        .hero { margin-top: var(--banner-h, 0px); }
+        .mobile-menu { top: calc(92px + var(--banner-h, 0px)) !important; }
+
         /* ===== HERO — WARM WELCOME ===== */
         .hero {
             padding: 136px 0 40px;
@@ -617,6 +631,13 @@
 
     <!-- NAV -->
     <nav class="nav" id="nav">
+        <!-- MANNA drive banner — remove this div (and its CSS/JS) after the drive ends -->
+        <div class="drive-banner" id="driveBanner">
+            <div class="drive-banner-inner">
+                <span>🥫 <strong>Food Drive for MANNA FoodBank:</strong> donations are down 24% and our neighbors need help. Drop off non-perishables at our office through September 30.</span>
+                <a href="manna-food-drive.html">Learn more &rarr;</a>
+            </div>
+        </div>
         <div class="nav-inner">
             <a href="/" class="nav-logo">
                 <img src="images/logo.png" alt="Peterson Insurance Group - Weaverville, NC">
@@ -1002,6 +1023,15 @@
 
         const hamburger = document.getElementById('hamburger');
         const mobileMenu = document.getElementById('mobileMenu');
+        // MANNA drive banner offset — remove with the banner after the drive ends
+        const driveBanner = document.getElementById('driveBanner');
+        function setBannerOffset() {
+            if (driveBanner) document.documentElement.style.setProperty('--banner-h', driveBanner.offsetHeight + 'px');
+        }
+        setBannerOffset();
+        window.addEventListener('resize', setBannerOffset);
+        window.addEventListener('load', setBannerOffset);
+
         hamburger.addEventListener('click', () => {
             mobileMenu.classList.toggle('open');
             const spans = hamburger.querySelectorAll('span');
