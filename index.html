@@ -246,7 +246,7 @@
         .hamburger { display: none; flex-direction: column; gap: 5px; background: none; border: none; cursor: pointer; padding: 4px; }
         .hamburger span { width: 24px; height: 2px; background: var(--navy); transition: all var(--transition); }
 
-        /* ===== ANNOUNCEMENT BANNER (MANNA drive — remove after drive ends) ===== */
+        /* ===== ANNOUNCEMENT BANNER (MANNA Empty Bowls — auto-hides Nov 1, 2026; remove after) ===== */
         .drive-banner { background: var(--navy-deep); }
         .drive-banner-inner {
             max-width: 1200px; margin: 0 auto; padding: 10px 24px;
@@ -257,6 +257,7 @@
         .drive-banner-inner strong { color: white; }
         .drive-banner-inner a { color: var(--green-sage); font-weight: 700; white-space: nowrap; }
         .drive-banner-inner a:hover { color: white; }
+        .drive-banner-inner .sep { color: rgba(255,255,255,0.4); }
         .hero { margin-top: var(--banner-h, 0px); }
         .mobile-menu { top: calc(92px + var(--banner-h, 0px)) !important; }
 
@@ -631,10 +632,10 @@
 
     <!-- NAV -->
     <nav class="nav" id="nav">
-        <!-- MANNA drive banner — remove this div (and its CSS/JS) after the drive ends -->
+        <!-- MANNA Empty Bowls banner — text swaps to donate-only after Oct 19; hides Nov 1 (see script). Remove div + CSS + JS after. -->
         <div class="drive-banner" id="driveBanner">
             <div class="drive-banner-inner">
-                <span>🥫 <strong>Food Drive for MANNA FoodBank:</strong> donations are down 24% and our neighbors need help. Drop off non-perishables at our office through September 30.</span>
+                <span id="bannerText">🥣 <strong>Empty Bowls for MANNA FoodBank</strong> — Mon., Oct. 19 in Asheville. Eirene made bowls for this year's event.</span>
                 <a href="manna-food-drive.html">Learn more &rarr;</a>
             </div>
         </div>
@@ -1023,8 +1024,16 @@
 
         const hamburger = document.getElementById('hamburger');
         const mobileMenu = document.getElementById('mobileMenu');
-        // MANNA drive banner offset — remove with the banner after the drive ends
+        // MANNA Empty Bowls banner — date logic + offset. Remove with the banner after Oct 2026.
         const driveBanner = document.getElementById('driveBanner');
+        (function(){
+            const now = new Date();
+            if (driveBanner && now >= new Date('2026-11-01T00:00:00-04:00')) { driveBanner.remove(); document.documentElement.style.setProperty('--banner-h','0px'); }
+            else if (now >= new Date('2026-10-20T00:00:00-04:00')) {
+                const t = document.getElementById('bannerText');
+                if (t) t.innerHTML = '🥣 <strong>Give to MANNA FoodBank this October</strong> — help feed neighbors across Western North Carolina.';
+            }
+        })();
         function setBannerOffset() {
             if (driveBanner) document.documentElement.style.setProperty('--banner-h', driveBanner.offsetHeight + 'px');
         }
