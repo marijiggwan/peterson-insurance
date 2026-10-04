@@ -72,10 +72,6 @@
 /blog/categories/community-support          /community     301
 /blog/categories/insurance-for-businesses   /business      301
 
-# ---- Retired campaign pages ----
-/manna-food-drive        /community     301
-/manna-food-drive.html   /community     301
-
 # ---- Catch-alls (must stay last) ----
 /blog/*   /   301
 /post/*   /   301

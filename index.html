@@ -632,13 +632,11 @@
 
     <!-- NAV -->
     <nav class="nav" id="nav">
-        <!-- MANNA Empty Bowls banner — tickets link hides after Oct 19; whole banner hides Nov 1 (see script). Remove div + CSS + JS after. -->
+        <!-- MANNA Empty Bowls banner — text swaps to donate-only after Oct 19; hides Nov 1 (see script). Remove div + CSS + JS after. -->
         <div class="drive-banner" id="driveBanner">
             <div class="drive-banner-inner">
-                <span>🥣 <strong>Empty Bowls for MANNA FoodBank</strong> — Mon., Oct. 19 in Asheville. Eirene made bowls for this year's event.</span>
-                <a href="https://manna-food-bank.givecloud.co/emptybowls2026" target="_blank" rel="noopener" id="bannerTickets">Get tickets &rarr;</a>
-                <span class="sep" id="bannerSep">|</span>
-                <a href="https://mannafoodbank.org/donate/" target="_blank" rel="noopener">Donate &rarr;</a>
+                <span id="bannerText">🥣 <strong>Empty Bowls for MANNA FoodBank</strong> — Mon., Oct. 19 in Asheville. Eirene made bowls for this year's event.</span>
+                <a href="manna-food-drive.html">Learn more &rarr;</a>
             </div>
         </div>
         <div class="nav-inner">
@@ -1032,7 +1030,8 @@
             const now = new Date();
             if (driveBanner && now >= new Date('2026-11-01T00:00:00-04:00')) { driveBanner.remove(); document.documentElement.style.setProperty('--banner-h','0px'); }
             else if (now >= new Date('2026-10-20T00:00:00-04:00')) {
-                ['bannerTickets','bannerSep'].forEach(id => { const el = document.getElementById(id); if (el) el.remove(); });
+                const t = document.getElementById('bannerText');
+                if (t) t.innerHTML = '🥣 <strong>Give to MANNA FoodBank this October</strong> — help feed neighbors across Western North Carolina.';
             }
         })();
         function setBannerOffset() {
